@@ -7,7 +7,6 @@
 
 #nullable enable
 
-using System;
 using System.Linq;
 
 namespace TreeSitter.Python.Nodes {
@@ -16,112 +15,111 @@ namespace TreeSitter.Python.Nodes {
     {
         public static PythonLanguageNode FromNode(TreeSitter.Node node) {
             if (node is null) throw new System.ArgumentNullException(nameof(node));
-
             if (!node.IsNamed) return new PythonLanguageNodeTerminalNode(node);
             switch (node.Kind) {
-                case "positional_separator": return new PositionalSeparator(node);
-                case "format_specifier": return new FormatSpecifier(node);
-                case "expression_statement": return new ExpressionStatement(node);
-                case "lambda": return new Lambda(node);
-                case "decorator": return new Decorator(node);
-                case "assignment": return new Assignment(node);
-                case "print_statement": return new PrintStatement(node);
-                case "slice": return new Slice(node);
-                case "pass_statement": return new PassStatement(node);
-                case "match_statement": return new MatchStatement(node);
-                case "elif_clause": return new ElifClause(node);
-                case "dictionary_splat": return new DictionarySplat(node);
-                case "try_statement": return new TryStatement(node);
-                case "keyword_separator": return new KeywordSeparator(node);
-                case "decorated_definition": return new DecoratedDefinition(node);
-                case "format_expression": return new FormatExpression(node);
-                case "lambda_parameters": return new LambdaParameters(node);
-                case "named_expression": return new NamedExpression(node);
-                case "expression_list": return new ExpressionList(node);
-                case "typed_parameter": return new TypedParameter(node);
-                case "break_statement": return new BreakStatement(node);
-                case "call": return new Call(node);
-                case "subscript": return new Subscript(node);
-                case "while_statement": return new WhileStatement(node);
-                case "generator_expression": return new GeneratorExpression(node);
-                case "list": return new List(node);
-                case "import_prefix": return new ImportPrefix(node);
-                case "import_from_statement": return new ImportFromStatement(node);
-                case "raise_statement": return new RaiseStatement(node);
-                case "dictionary_splat_pattern": return new DictionarySplatPattern(node);
-                case "dictionary_comprehension": return new DictionaryComprehension(node);
-                case "function_definition": return new FunctionDefinition(node);
-                case "interpolation": return new Interpolation(node);
-                case "comparison_operator": return new ComparisonOperator(node);
-                case "else_clause": return new ElseClause(node);
-                case "dotted_name": return new DottedName(node);
-                case "list_splat_pattern": return new ListSplatPattern(node);
-                case "binary_operator": return new BinaryOperator(node);
-                case "as_pattern": return new AsPattern(node);
-                case "pattern_list": return new PatternList(node);
-                case "list_pattern": return new ListPattern(node);
-                case "continue_statement": return new ContinueStatement(node);
-                case "if_statement": return new IfStatement(node);
-                case "conditional_expression": return new ConditionalExpression(node);
-                case "import_statement": return new ImportStatement(node);
-                case "set": return new Set(node);
-                case "type": return new Type(node);
-                case "unary_operator": return new UnaryOperator(node);
-                case "future_import_statement": return new FutureImportStatement(node);
-                case "not_operator": return new NotOperator(node);
-                case "keyword_argument": return new KeywordArgument(node);
-                case "for_statement": return new ForStatement(node);
-                case "concatenated_string": return new ConcatenatedString(node);
-                case "typed_default_parameter": return new TypedDefaultParameter(node);
-                case "module": return new Module(node);
-                case "aliased_import": return new AliasedImport(node);
-                case "ellipsis": return new Ellipsis(node);
                 case "assert_statement": return new AssertStatement(node);
-                case "return_statement": return new ReturnStatement(node);
-                case "chevron": return new Chevron(node);
-                case "true": return new True(node);
-                case "none": return new None(node);
-                case "float": return new Float(node);
-                case "default_parameter": return new DefaultParameter(node);
-                case "type_conversion": return new TypeConversion(node);
-                case "parenthesized_list_splat": return new ParenthesizedListSplat(node);
-                case "parenthesized_expression": return new ParenthesizedExpression(node);
-                case "integer": return new Integer(node);
-                case "delete_statement": return new DeleteStatement(node);
-                case "argument_list": return new ArgumentList(node);
-                case "tuple": return new Tuple(node);
-                case "wildcard_import": return new WildcardImport(node);
-                case "with_item": return new WithItem(node);
-                case "false": return new False(node);
-                case "set_comprehension": return new SetComprehension(node);
-                case "finally_clause": return new FinallyClause(node);
-                case "augmented_assignment": return new AugmentedAssignment(node);
-                case "pair": return new Pair(node);
-                case "global_statement": return new GlobalStatement(node);
-                case "attribute": return new Attribute(node);
-                case "string": return new String(node);
-                case "comment": return new Comment(node);
                 case "parameters": return new Parameters(node);
-                case "with_statement": return new WithStatement(node);
-                case "case_clause": return new CaseClause(node);
-                case "dictionary": return new Dictionary(node);
-                case "nonlocal_statement": return new NonlocalStatement(node);
-                case "tuple_pattern": return new TuplePattern(node);
-                case "except_clause": return new ExceptClause(node);
-                case "with_clause": return new WithClause(node);
-                case "relative_import": return new RelativeImport(node);
-                case "block": return new Block(node);
-                case "list_comprehension": return new ListComprehension(node);
-                case "list_splat": return new ListSplat(node);
-                case "escape_sequence": return new EscapeSequence(node);
-                case "exec_statement": return new ExecStatement(node);
-                case "for_in_clause": return new ForInClause(node);
+                case "set_comprehension": return new SetComprehension(node);
+                case "comparison_operator": return new ComparisonOperator(node);
+                case "with_item": return new WithItem(node);
+                case "list_splat_pattern": return new ListSplatPattern(node);
+                case "expression_statement": return new ExpressionStatement(node);
+                case "keyword_argument": return new KeywordArgument(node);
+                case "type_conversion": return new TypeConversion(node);
+                case "generator_expression": return new GeneratorExpression(node);
                 case "class_definition": return new ClassDefinition(node);
-                case "await": return new Await(node);
-                case "boolean_operator": return new BooleanOperator(node);
+                case "break_statement": return new BreakStatement(node);
+                case "interpolation": return new Interpolation(node);
+                case "lambda_parameters": return new LambdaParameters(node);
+                case "list": return new List(node);
+                case "integer": return new Integer(node);
+                case "with_clause": return new WithClause(node);
+                case "aliased_import": return new AliasedImport(node);
+                case "module": return new Module(node);
+                case "global_statement": return new GlobalStatement(node);
+                case "dictionary_splat_pattern": return new DictionarySplatPattern(node);
                 case "identifier": return new Identifier(node);
+                case "else_clause": return new ElseClause(node);
+                case "list_pattern": return new ListPattern(node);
+                case "if_statement": return new IfStatement(node);
+                case "await": return new Await(node);
+                case "dictionary": return new Dictionary(node);
+                case "function_definition": return new FunctionDefinition(node);
+                case "elif_clause": return new ElifClause(node);
+                case "float": return new Float(node);
+                case "chevron": return new Chevron(node);
+                case "format_specifier": return new FormatSpecifier(node);
+                case "pair": return new Pair(node);
                 case "yield": return new Yield(node);
+                case "tuple": return new Tuple(node);
                 case "if_clause": return new IfClause(node);
+                case "argument_list": return new ArgumentList(node);
+                case "continue_statement": return new ContinueStatement(node);
+                case "import_statement": return new ImportStatement(node);
+                case "tuple_pattern": return new TuplePattern(node);
+                case "decorator": return new Decorator(node);
+                case "typed_default_parameter": return new TypedDefaultParameter(node);
+                case "keyword_separator": return new KeywordSeparator(node);
+                case "concatenated_string": return new ConcatenatedString(node);
+                case "wildcard_import": return new WildcardImport(node);
+                case "parenthesized_list_splat": return new ParenthesizedListSplat(node);
+                case "named_expression": return new NamedExpression(node);
+                case "for_in_clause": return new ForInClause(node);
+                case "finally_clause": return new FinallyClause(node);
+                case "as_pattern": return new AsPattern(node);
+                case "not_operator": return new NotOperator(node);
+                case "default_parameter": return new DefaultParameter(node);
+                case "except_clause": return new ExceptClause(node);
+                case "try_statement": return new TryStatement(node);
+                case "relative_import": return new RelativeImport(node);
+                case "decorated_definition": return new DecoratedDefinition(node);
+                case "dictionary_splat": return new DictionarySplat(node);
+                case "escape_sequence": return new EscapeSequence(node);
+                case "format_expression": return new FormatExpression(node);
+                case "set": return new Set(node);
+                case "list_comprehension": return new ListComprehension(node);
+                case "slice": return new Slice(node);
+                case "import_from_statement": return new ImportFromStatement(node);
+                case "attribute": return new Attribute(node);
+                case "print_statement": return new PrintStatement(node);
+                case "none": return new None(node);
+                case "dictionary_comprehension": return new DictionaryComprehension(node);
+                case "binary_operator": return new BinaryOperator(node);
+                case "case_clause": return new CaseClause(node);
+                case "future_import_statement": return new FutureImportStatement(node);
+                case "raise_statement": return new RaiseStatement(node);
+                case "type": return new Type(node);
+                case "expression_list": return new ExpressionList(node);
+                case "pattern_list": return new PatternList(node);
+                case "true": return new True(node);
+                case "delete_statement": return new DeleteStatement(node);
+                case "boolean_operator": return new BooleanOperator(node);
+                case "typed_parameter": return new TypedParameter(node);
+                case "list_splat": return new ListSplat(node);
+                case "pass_statement": return new PassStatement(node);
+                case "subscript": return new Subscript(node);
+                case "block": return new Block(node);
+                case "positional_separator": return new PositionalSeparator(node);
+                case "string": return new String(node);
+                case "import_prefix": return new ImportPrefix(node);
+                case "call": return new Call(node);
+                case "lambda": return new Lambda(node);
+                case "match_statement": return new MatchStatement(node);
+                case "nonlocal_statement": return new NonlocalStatement(node);
+                case "with_statement": return new WithStatement(node);
+                case "while_statement": return new WhileStatement(node);
+                case "conditional_expression": return new ConditionalExpression(node);
+                case "unary_operator": return new UnaryOperator(node);
+                case "false": return new False(node);
+                case "parenthesized_expression": return new ParenthesizedExpression(node);
+                case "assignment": return new Assignment(node);
+                case "for_statement": return new ForStatement(node);
+                case "dotted_name": return new DottedName(node);
+                case "return_statement": return new ReturnStatement(node);
+                case "exec_statement": return new ExecStatement(node);
+                case "augmented_assignment": return new AugmentedAssignment(node);
+                case "ellipsis": return new Ellipsis(node);
+                case "comment": return new Comment(node);
                 case "ERROR": return new ErrorNode(node);
                 default: throw new System.ArgumentException("unknown node type: " + node.Kind, nameof(node));
             }
@@ -189,7 +187,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class ArgumentList : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ArgumentList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "argument_list");
@@ -197,14 +195,14 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class AsPattern : PythonLanguageNode, Expression
     {
         public Expression Alias { get; set; }
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public AsPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "as_pattern");
@@ -213,13 +211,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class AssertStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public AssertStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "assert_statement");
@@ -227,7 +225,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -282,7 +280,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class Await : PythonLanguageNode, Expression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public Await(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "await");
@@ -290,7 +288,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -311,7 +309,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class Block : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Block(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "block");
@@ -319,7 +317,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -364,7 +362,7 @@ namespace TreeSitter.Python.Nodes {
     {
         public Block Consequence { get; set; }
         public IfClause? Guard { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Pattern { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Pattern { get; set; }
         public CaseClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "case_clause");
@@ -374,13 +372,13 @@ namespace TreeSitter.Python.Nodes {
                 var tmp = node.ChildByFieldName("guard");
                 this.Guard = tmp is null ? null : new IfClause(tmp);
             }
-            this.Pattern = node.ChildrenByFieldName("pattern").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Pattern = node.ChildrenByFieldName("pattern").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Chevron : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public Chevron(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "chevron");
@@ -388,7 +386,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -412,23 +410,23 @@ namespace TreeSitter.Python.Nodes {
 
     public class ComparisonOperator : PythonLanguageNode, Expression
     {
-        public System.Collections.Generic.List<PythonLanguageNodeTerminalNode> Operators { get; set; }
-        public System.Collections.Generic.List<PrimaryExpression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNodeTerminalNode> Operators { get; set; }
+        public System.Collections.Generic.IEnumerable<PrimaryExpression> Children { get; set; }
         public ComparisonOperator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "comparison_operator");
             
-            this.Operators = node.ChildrenByFieldName("operators").Select(x => new PythonLanguageNodeTerminalNode(x)).ToList();
+            this.Operators = node.ChildrenByFieldName("operators").Select(x => new PythonLanguageNodeTerminalNode(x));
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PrimaryExpression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PrimaryExpression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ConcatenatedString : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<String> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<String> Children { get; set; }
         public ConcatenatedString(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "concatenated_string");
@@ -436,13 +434,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new String(x)).ToList();
+                .Select(x => new String(x));
         }
     }
 
     public class ConditionalExpression : PythonLanguageNode, Expression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ConditionalExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "conditional_expression");
@@ -450,7 +448,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -466,7 +464,7 @@ namespace TreeSitter.Python.Nodes {
     public class DecoratedDefinition : PythonLanguageNode, ICompoundStatement
     {
         public PythonLanguageNode Definition { get; set; }
-        public System.Collections.Generic.List<Decorator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Children { get; set; }
         public DecoratedDefinition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "decorated_definition");
@@ -475,13 +473,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Decorator(x)).ToList();
+                .Select(x => new Decorator(x));
         }
     }
 
     public class Decorator : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PrimaryExpression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PrimaryExpression> Children { get; set; }
         public Decorator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "decorator");
@@ -489,7 +487,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PrimaryExpression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PrimaryExpression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -508,7 +506,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class DeleteStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public DeleteStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "delete_statement");
@@ -516,13 +514,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Dictionary : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Dictionary(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "dictionary");
@@ -530,14 +528,14 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class DictionaryComprehension : PythonLanguageNode, PrimaryExpression
     {
         public Pair Body { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public DictionaryComprehension(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "dictionary_comprehension");
@@ -546,13 +544,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class DictionarySplat : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public DictionarySplat(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "dictionary_splat");
@@ -560,13 +558,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class DictionarySplatPattern : PythonLanguageNode, Parameter
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public DictionarySplatPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "dictionary_splat_pattern");
@@ -574,13 +572,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class DottedName : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public DottedName(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "dotted_name");
@@ -588,7 +586,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
@@ -618,7 +616,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class ExceptClause : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ExceptClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "except_clause");
@@ -626,14 +624,14 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExecStatement : PythonLanguageNode, ISimpleStatement
     {
         public String Code { get; set; }
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ExecStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "exec_statement");
@@ -642,13 +640,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExpressionList : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ExpressionList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "expression_list");
@@ -656,13 +654,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExpressionStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ExpressionStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "expression_statement");
@@ -670,13 +668,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class FinallyClause : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Block> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Block> Children { get; set; }
         public FinallyClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "finally_clause");
@@ -684,20 +682,20 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Block(x)).ToList();
+                .Select(x => new Block(x));
         }
     }
 
     public class ForInClause : PythonLanguageNode
     {
         public PythonLanguageNode Left { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Right { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Right { get; set; }
         public ForInClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "for_in_clause");
             
             this.Left = (PythonLanguageNode) PythonLanguageNode.FromNode(node.ChildByFieldName("left"))!;
-            this.Right = node.ChildrenByFieldName("right").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Right = node.ChildrenByFieldName("right").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -723,7 +721,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class FormatExpression : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public FormatExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "format_expression");
@@ -731,13 +729,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class FormatSpecifier : PythonLanguageNode
     {
-        public System.Collections.Generic.List<FormatExpression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<FormatExpression> Children { get; set; }
         public FormatSpecifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "format_specifier");
@@ -745,7 +743,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new FormatExpression(x)).ToList();
+                .Select(x => new FormatExpression(x));
         }
     }
 
@@ -771,19 +769,19 @@ namespace TreeSitter.Python.Nodes {
 
     public class FutureImportStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Name { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Name { get; set; }
         public FutureImportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "future_import_statement");
             
-            this.Name = node.ChildrenByFieldName("name").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Name = node.ChildrenByFieldName("name").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class GeneratorExpression : PythonLanguageNode, PrimaryExpression
     {
         public Expression Body { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public GeneratorExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "generator_expression");
@@ -792,13 +790,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class GlobalStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public GlobalStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "global_statement");
@@ -806,13 +804,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class IfClause : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public IfClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "if_clause");
@@ -820,20 +818,20 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class IfStatement : PythonLanguageNode, ICompoundStatement
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Alternative { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Alternative { get; set; }
         public Expression Condition { get; set; }
         public Block Consequence { get; set; }
         public IfStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "if_statement");
             
-            this.Alternative = node.ChildrenByFieldName("alternative").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Alternative = node.ChildrenByFieldName("alternative").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
             this.Condition = (Expression) PythonLanguageNode.FromNode(node.ChildByFieldName("condition"))!;
             this.Consequence = new Block(node.ChildByFieldName("consequence"));
         }
@@ -842,18 +840,18 @@ namespace TreeSitter.Python.Nodes {
     public class ImportFromStatement : PythonLanguageNode, ISimpleStatement
     {
         public PythonLanguageNode ModuleName { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Name { get; set; }
-        public System.Collections.Generic.List<WildcardImport> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Name { get; set; }
+        public System.Collections.Generic.IEnumerable<WildcardImport> Children { get; set; }
         public ImportFromStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_from_statement");
             
             this.ModuleName = (PythonLanguageNode) PythonLanguageNode.FromNode(node.ChildByFieldName("module_name"))!;
-            this.Name = node.ChildrenByFieldName("name").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Name = node.ChildrenByFieldName("name").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new WildcardImport(x)).ToList();
+                .Select(x => new WildcardImport(x));
         }
     }
 
@@ -868,18 +866,18 @@ namespace TreeSitter.Python.Nodes {
 
     public class ImportStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Name { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Name { get; set; }
         public ImportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_statement");
             
-            this.Name = node.ChildrenByFieldName("name").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Name = node.ChildrenByFieldName("name").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Interpolation : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Interpolation(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "interpolation");
@@ -887,7 +885,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -931,7 +929,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class LambdaParameters : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Parameter> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Parameter> Children { get; set; }
         public LambdaParameters(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "lambda_parameters");
@@ -939,13 +937,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Parameter) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Parameter) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class List : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public List(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "list");
@@ -953,14 +951,14 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ListComprehension : PythonLanguageNode, PrimaryExpression
     {
         public Expression Body { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ListComprehension(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "list_comprehension");
@@ -969,13 +967,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ListPattern : PythonLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<Pattern> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Pattern> Children { get; set; }
         public ListPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "list_pattern");
@@ -983,13 +981,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Pattern) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Pattern) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ListSplat : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ListSplat(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "list_splat");
@@ -997,13 +995,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ListSplatPattern : PythonLanguageNode, Parameter, Pattern
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ListSplatPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "list_splat_pattern");
@@ -1011,26 +1009,26 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class MatchStatement : PythonLanguageNode, ICompoundStatement
     {
-        public System.Collections.Generic.List<CaseClause> Alternative { get; set; }
-        public System.Collections.Generic.List<Expression> Subject { get; set; }
+        public System.Collections.Generic.IEnumerable<CaseClause> Alternative { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Subject { get; set; }
         public MatchStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "match_statement");
             
-            this.Alternative = node.ChildrenByFieldName("alternative").Select(x => new CaseClause(x)).ToList();
-            this.Subject = node.ChildrenByFieldName("subject").Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Alternative = node.ChildrenByFieldName("alternative").Select(x => new CaseClause(x));
+            this.Subject = node.ChildrenByFieldName("subject").Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Module : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Module(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "module");
@@ -1038,7 +1036,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1057,7 +1055,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class NonlocalStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public NonlocalStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "nonlocal_statement");
@@ -1065,7 +1063,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
@@ -1095,7 +1093,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class Parameters : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Parameter> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Parameter> Children { get; set; }
         public Parameters(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parameters");
@@ -1103,13 +1101,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Parameter) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Parameter) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParenthesizedExpression : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ParenthesizedExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_expression");
@@ -1117,13 +1115,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParenthesizedListSplat : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ParenthesizedListSplat(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_list_splat");
@@ -1131,7 +1129,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1146,7 +1144,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class PatternList : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Pattern> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Pattern> Children { get; set; }
         public PatternList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "pattern_list");
@@ -1154,7 +1152,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Pattern) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Pattern) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1169,24 +1167,24 @@ namespace TreeSitter.Python.Nodes {
 
     public class PrintStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<Expression> Argument { get; set; }
-        public System.Collections.Generic.List<Chevron> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Argument { get; set; }
+        public System.Collections.Generic.IEnumerable<Chevron> Children { get; set; }
         public PrintStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "print_statement");
             
-            this.Argument = node.ChildrenByFieldName("argument").Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+            this.Argument = node.ChildrenByFieldName("argument").Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Chevron(x)).ToList();
+                .Select(x => new Chevron(x));
         }
     }
 
     public class RaiseStatement : PythonLanguageNode, ISimpleStatement
     {
         public Expression? Cause { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public RaiseStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "raise_statement");
@@ -1198,13 +1196,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class RelativeImport : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public RelativeImport(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "relative_import");
@@ -1212,13 +1210,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class ReturnStatement : PythonLanguageNode, ISimpleStatement
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public ReturnStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "return_statement");
@@ -1226,13 +1224,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Set : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Set(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "set");
@@ -1240,14 +1238,14 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class SetComprehension : PythonLanguageNode, PrimaryExpression
     {
         public Expression Body { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public SetComprehension(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "set_comprehension");
@@ -1256,13 +1254,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Slice : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public Slice(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "slice");
@@ -1270,13 +1268,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class String : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public String(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "string");
@@ -1284,19 +1282,19 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Subscript : PythonLanguageNode, Pattern, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> TheSubscript { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> TheSubscript { get; set; }
         public PrimaryExpression Value { get; set; }
         public Subscript(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "subscript");
             
-            this.TheSubscript = node.ChildrenByFieldName("subscript").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+            this.TheSubscript = node.ChildrenByFieldName("subscript").Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
             this.Value = (PrimaryExpression) PythonLanguageNode.FromNode(node.ChildByFieldName("value"))!;
         }
     }
@@ -1304,7 +1302,7 @@ namespace TreeSitter.Python.Nodes {
     public class TryStatement : PythonLanguageNode, ICompoundStatement
     {
         public Block Body { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public TryStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "try_statement");
@@ -1313,13 +1311,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Tuple : PythonLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Tuple(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "tuple");
@@ -1327,13 +1325,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class TuplePattern : PythonLanguageNode, Parameter, Pattern
     {
-        public System.Collections.Generic.List<Pattern> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Pattern> Children { get; set; }
         public TuplePattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "tuple_pattern");
@@ -1341,13 +1339,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Pattern) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Pattern) PythonLanguageNode.FromNode(x)!);
         }
     }
 
     public class Type : PythonLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public Type(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type");
@@ -1355,7 +1353,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1377,7 +1375,7 @@ namespace TreeSitter.Python.Nodes {
     public class TypedParameter : PythonLanguageNode, Parameter
     {
         public Type Type { get; set; }
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public TypedParameter(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "typed_parameter");
@@ -1386,7 +1384,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1432,7 +1430,7 @@ namespace TreeSitter.Python.Nodes {
 
     public class WithClause : PythonLanguageNode
     {
-        public System.Collections.Generic.List<WithItem> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<WithItem> Children { get; set; }
         public WithClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "with_clause");
@@ -1440,7 +1438,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new WithItem(x)).ToList();
+                .Select(x => new WithItem(x));
         }
     }
 
@@ -1458,7 +1456,7 @@ namespace TreeSitter.Python.Nodes {
     public class WithStatement : PythonLanguageNode, ICompoundStatement
     {
         public Block Body { get; set; }
-        public System.Collections.Generic.List<WithClause> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<WithClause> Children { get; set; }
         public WithStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "with_statement");
@@ -1467,13 +1465,13 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new WithClause(x)).ToList();
+                .Select(x => new WithClause(x));
         }
     }
 
     public class Yield : PythonLanguageNode
     {
-        public System.Collections.Generic.List<PythonLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<PythonLanguageNode> Children { get; set; }
         public Yield(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "yield");
@@ -1481,7 +1479,7 @@ namespace TreeSitter.Python.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (PythonLanguageNode) PythonLanguageNode.FromNode(x)!);
         }
     }
 

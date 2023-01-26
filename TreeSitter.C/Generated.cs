@@ -17,109 +17,109 @@ namespace TreeSitter.C.Nodes {
             if (node is null) throw new System.ArgumentNullException(nameof(node));
             if (!node.IsNamed) return new CLanguageNodeTerminalNode(node);
             switch (node.Kind) {
-                case "storage_class_specifier": return new StorageClassSpecifier(node);
-                case "expression_statement": return new ExpressionStatement(node);
-                case "primitive_type": return new PrimitiveType(node);
-                case "preproc_function_def": return new PreprocFunctionDef(node);
-                case "preproc_elif": return new PreprocElif(node);
-                case "system_lib_string": return new SystemLibString(node);
-                case "attributed_statement": return new AttributedStatement(node);
-                case "attribute_specifier": return new AttributeSpecifier(node);
-                case "string_literal": return new StringLiteral(node);
-                case "initializer_pair": return new InitializerPair(node);
-                case "enumerator": return new Enumerator(node);
-                case "preproc_params": return new PreprocParams(node);
-                case "statement_identifier": return new StatementIdentifier(node);
-                case "parameter_list": return new ParameterList(node);
                 case "sizeof_expression": return new SizeofExpression(node);
-                case "preproc_directive": return new PreprocDirective(node);
-                case "compound_literal_expression": return new CompoundLiteralExpression(node);
-                case "switch_statement": return new SwitchStatement(node);
-                case "unary_expression": return new UnaryExpression(node);
-                case "array_declarator": return new ArrayDeclarator(node);
-                case "break_statement": return new BreakStatement(node);
-                case "field_designator": return new FieldDesignator(node);
-                case "function_declarator": return new FunctionDeclarator(node);
-                case "enum_specifier": return new EnumSpecifier(node);
-                case "pointer_declarator": return new PointerDeclarator(node);
-                case "abstract_parenthesized_declarator": return new AbstractParenthesizedDeclarator(node);
-                case "translation_unit": return new TranslationUnit(node);
-                case "while_statement": return new WhileStatement(node);
-                case "preproc_else": return new PreprocElse(node);
-                case "macro_type_specifier": return new MacroTypeSpecifier(node);
-                case "function_definition": return new FunctionDefinition(node);
-                case "binary_expression": return new BinaryExpression(node);
-                case "preproc_call": return new PreprocCall(node);
-                case "field_identifier": return new FieldIdentifier(node);
-                case "char_literal": return new CharLiteral(node);
-                case "assignment_expression": return new AssignmentExpression(node);
-                case "comma_expression": return new CommaExpression(node);
-                case "initializer_list": return new InitializerList(node);
-                case "continue_statement": return new ContinueStatement(node);
-                case "if_statement": return new IfStatement(node);
-                case "conditional_expression": return new ConditionalExpression(node);
-                case "bitfield_clause": return new BitfieldClause(node);
-                case "subscript_expression": return new SubscriptExpression(node);
-                case "declaration": return new Declaration(node);
-                case "ms_unsigned_ptr_modifier": return new MsUnsignedPtrModifier(node);
-                case "preproc_ifdef": return new PreprocIfdef(node);
-                case "abstract_array_declarator": return new AbstractArrayDeclarator(node);
-                case "goto_statement": return new GotoStatement(node);
-                case "for_statement": return new ForStatement(node);
-                case "concatenated_string": return new ConcatenatedString(node);
-                case "attribute_declaration": return new AttributeDeclaration(node);
-                case "attributed_declarator": return new AttributedDeclarator(node);
-                case "linkage_specification": return new LinkageSpecification(node);
-                case "preproc_if": return new PreprocIf(node);
-                case "labeled_statement": return new LabeledStatement(node);
-                case "parameter_declaration": return new ParameterDeclaration(node);
-                case "preproc_arg": return new PreprocArg(node);
-                case "abstract_pointer_declarator": return new AbstractPointerDeclarator(node);
-                case "field_declaration_list": return new FieldDeclarationList(node);
-                case "null": return new Null(node);
-                case "declaration_list": return new DeclarationList(node);
-                case "return_statement": return new ReturnStatement(node);
-                case "true": return new True(node);
-                case "case_statement": return new CaseStatement(node);
-                case "ms_call_modifier": return new MsCallModifier(node);
                 case "sized_type_specifier": return new SizedTypeSpecifier(node);
-                case "preproc_def": return new PreprocDef(node);
-                case "field_declaration": return new FieldDeclaration(node);
-                case "parenthesized_expression": return new ParenthesizedExpression(node);
-                case "ms_pointer_modifier": return new MsPointerModifier(node);
-                case "type_definition": return new TypeDefinition(node);
-                case "field_expression": return new FieldExpression(node);
-                case "type_identifier": return new TypeIdentifier(node);
-                case "argument_list": return new ArgumentList(node);
-                case "false": return new False(node);
-                case "compound_statement": return new CompoundStatement(node);
-                case "update_expression": return new UpdateExpression(node);
-                case "subscript_designator": return new SubscriptDesignator(node);
-                case "pointer_expression": return new PointerExpression(node);
-                case "type_qualifier": return new TypeQualifier(node);
-                case "parenthesized_declarator": return new ParenthesizedDeclarator(node);
-                case "ms_signed_ptr_modifier": return new MsSignedPtrModifier(node);
-                case "ms_unaligned_ptr_modifier": return new MsUnalignedPtrModifier(node);
-                case "attribute": return new Attribute(node);
-                case "call_expression": return new CallExpression(node);
-                case "ms_restrict_modifier": return new MsRestrictModifier(node);
-                case "abstract_function_declarator": return new AbstractFunctionDeclarator(node);
-                case "comment": return new Comment(node);
+                case "primitive_type": return new PrimitiveType(node);
+                case "pointer_declarator": return new PointerDeclarator(node);
                 case "number_literal": return new NumberLiteral(node);
-                case "preproc_include": return new PreprocInclude(node);
-                case "cast_expression": return new CastExpression(node);
-                case "type_descriptor": return new TypeDescriptor(node);
-                case "enumerator_list": return new EnumeratorList(node);
+                case "comma_expression": return new CommaExpression(node);
+                case "abstract_pointer_declarator": return new AbstractPointerDeclarator(node);
+                case "attribute_specifier": return new AttributeSpecifier(node);
+                case "expression_statement": return new ExpressionStatement(node);
+                case "function_declarator": return new FunctionDeclarator(node);
+                case "abstract_function_declarator": return new AbstractFunctionDeclarator(node);
                 case "do_statement": return new DoStatement(node);
+                case "field_expression": return new FieldExpression(node);
+                case "break_statement": return new BreakStatement(node);
+                case "initializer_pair": return new InitializerPair(node);
+                case "storage_class_specifier": return new StorageClassSpecifier(node);
+                case "bitfield_clause": return new BitfieldClause(node);
+                case "parenthesized_declarator": return new ParenthesizedDeclarator(node);
+                case "abstract_parenthesized_declarator": return new AbstractParenthesizedDeclarator(node);
+                case "preproc_call": return new PreprocCall(node);
+                case "declaration": return new Declaration(node);
+                case "subscript_designator": return new SubscriptDesignator(node);
+                case "field_declaration_list": return new FieldDeclarationList(node);
+                case "preproc_arg": return new PreprocArg(node);
                 case "union_specifier": return new UnionSpecifier(node);
-                case "variadic_parameter": return new VariadicParameter(node);
-                case "escape_sequence": return new EscapeSequence(node);
-                case "ms_declspec_modifier": return new MsDeclspecModifier(node);
-                case "init_declarator": return new InitDeclarator(node);
-                case "struct_specifier": return new StructSpecifier(node);
+                case "unary_expression": return new UnaryExpression(node);
                 case "identifier": return new Identifier(node);
-                case "ms_based_modifier": return new MsBasedModifier(node);
+                case "macro_type_specifier": return new MacroTypeSpecifier(node);
+                case "if_statement": return new IfStatement(node);
+                case "attributed_declarator": return new AttributedDeclarator(node);
+                case "function_definition": return new FunctionDefinition(node);
+                case "compound_statement": return new CompoundStatement(node);
                 case "preproc_defined": return new PreprocDefined(node);
+                case "parameter_list": return new ParameterList(node);
+                case "compound_literal_expression": return new CompoundLiteralExpression(node);
+                case "null": return new Null(node);
+                case "case_statement": return new CaseStatement(node);
+                case "attribute_declaration": return new AttributeDeclaration(node);
+                case "subscript_expression": return new SubscriptExpression(node);
+                case "labeled_statement": return new LabeledStatement(node);
+                case "argument_list": return new ArgumentList(node);
+                case "continue_statement": return new ContinueStatement(node);
+                case "preproc_elif": return new PreprocElif(node);
+                case "type_qualifier": return new TypeQualifier(node);
+                case "ms_based_modifier": return new MsBasedModifier(node);
+                case "concatenated_string": return new ConcatenatedString(node);
+                case "preproc_ifdef": return new PreprocIfdef(node);
+                case "variadic_parameter": return new VariadicParameter(node);
+                case "ms_pointer_modifier": return new MsPointerModifier(node);
+                case "statement_identifier": return new StatementIdentifier(node);
+                case "goto_statement": return new GotoStatement(node);
+                case "cast_expression": return new CastExpression(node);
+                case "parameter_declaration": return new ParameterDeclaration(node);
+                case "field_designator": return new FieldDesignator(node);
+                case "type_definition": return new TypeDefinition(node);
+                case "array_declarator": return new ArrayDeclarator(node);
+                case "pointer_expression": return new PointerExpression(node);
+                case "ms_signed_ptr_modifier": return new MsSignedPtrModifier(node);
+                case "system_lib_string": return new SystemLibString(node);
+                case "struct_specifier": return new StructSpecifier(node);
+                case "translation_unit": return new TranslationUnit(node);
+                case "escape_sequence": return new EscapeSequence(node);
+                case "binary_expression": return new BinaryExpression(node);
+                case "enum_specifier": return new EnumSpecifier(node);
+                case "initializer_list": return new InitializerList(node);
+                case "attribute": return new Attribute(node);
+                case "preproc_def": return new PreprocDef(node);
+                case "enumerator_list": return new EnumeratorList(node);
+                case "true": return new True(node);
+                case "ms_declspec_modifier": return new MsDeclspecModifier(node);
+                case "attributed_statement": return new AttributedStatement(node);
+                case "field_declaration": return new FieldDeclaration(node);
+                case "preproc_if": return new PreprocIf(node);
+                case "preproc_include": return new PreprocInclude(node);
+                case "field_identifier": return new FieldIdentifier(node);
+                case "call_expression": return new CallExpression(node);
+                case "preproc_params": return new PreprocParams(node);
+                case "string_literal": return new StringLiteral(node);
+                case "update_expression": return new UpdateExpression(node);
+                case "switch_statement": return new SwitchStatement(node);
+                case "preproc_directive": return new PreprocDirective(node);
+                case "while_statement": return new WhileStatement(node);
+                case "enumerator": return new Enumerator(node);
+                case "conditional_expression": return new ConditionalExpression(node);
+                case "ms_unsigned_ptr_modifier": return new MsUnsignedPtrModifier(node);
+                case "char_literal": return new CharLiteral(node);
+                case "false": return new False(node);
+                case "ms_restrict_modifier": return new MsRestrictModifier(node);
+                case "parenthesized_expression": return new ParenthesizedExpression(node);
+                case "preproc_else": return new PreprocElse(node);
+                case "init_declarator": return new InitDeclarator(node);
+                case "for_statement": return new ForStatement(node);
+                case "comment": return new Comment(node);
+                case "linkage_specification": return new LinkageSpecification(node);
+                case "return_statement": return new ReturnStatement(node);
+                case "type_descriptor": return new TypeDescriptor(node);
+                case "abstract_array_declarator": return new AbstractArrayDeclarator(node);
+                case "ms_call_modifier": return new MsCallModifier(node);
+                case "declaration_list": return new DeclarationList(node);
+                case "assignment_expression": return new AssignmentExpression(node);
+                case "ms_unaligned_ptr_modifier": return new MsUnalignedPtrModifier(node);
+                case "preproc_function_def": return new PreprocFunctionDef(node);
+                case "type_identifier": return new TypeIdentifier(node);
                 case "ERROR": return new ErrorNode(node);
                 default: throw new System.ArgumentException("unknown node type: " + node.Kind, nameof(node));
             }
@@ -180,7 +180,7 @@ namespace TreeSitter.C.Nodes {
     {
         public IAbstractDeclarator? Declarator { get; set; }
         public CLanguageNode? Size { get; set; }
-        public System.Collections.Generic.List<TypeQualifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeQualifier> Children { get; set; }
         public AbstractArrayDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "abstract_array_declarator");
@@ -196,7 +196,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeQualifier(x)).ToList();
+                .Select(x => new TypeQualifier(x));
         }
     }
 
@@ -218,7 +218,7 @@ namespace TreeSitter.C.Nodes {
 
     public class AbstractParenthesizedDeclarator : CLanguageNode, IAbstractDeclarator
     {
-        public System.Collections.Generic.List<IAbstractDeclarator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IAbstractDeclarator> Children { get; set; }
         public AbstractParenthesizedDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "abstract_parenthesized_declarator");
@@ -226,14 +226,14 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IAbstractDeclarator) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IAbstractDeclarator) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class AbstractPointerDeclarator : CLanguageNode, IAbstractDeclarator
     {
         public IAbstractDeclarator? Declarator { get; set; }
-        public System.Collections.Generic.List<TypeQualifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeQualifier> Children { get; set; }
         public AbstractPointerDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "abstract_pointer_declarator");
@@ -245,13 +245,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeQualifier(x)).ToList();
+                .Select(x => new TypeQualifier(x));
         }
     }
 
     public class ArgumentList : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ArgumentList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "argument_list");
@@ -259,7 +259,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -267,7 +267,7 @@ namespace TreeSitter.C.Nodes {
     {
         public CLanguageNode Declarator { get; set; }
         public CLanguageNode? Size { get; set; }
-        public System.Collections.Generic.List<TypeQualifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeQualifier> Children { get; set; }
         public ArrayDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "array_declarator");
@@ -280,7 +280,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeQualifier(x)).ToList();
+                .Select(x => new TypeQualifier(x));
         }
     }
 
@@ -303,7 +303,7 @@ namespace TreeSitter.C.Nodes {
     {
         public Identifier Name { get; set; }
         public Identifier? Prefix { get; set; }
-        public System.Collections.Generic.List<ArgumentList> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ArgumentList> Children { get; set; }
         public Attribute(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attribute");
@@ -316,13 +316,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ArgumentList(x)).ToList();
+                .Select(x => new ArgumentList(x));
         }
     }
 
     public class AttributeDeclaration : CLanguageNode
     {
-        public System.Collections.Generic.List<Attribute> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Attribute> Children { get; set; }
         public AttributeDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attribute_declaration");
@@ -330,13 +330,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Attribute(x)).ToList();
+                .Select(x => new Attribute(x));
         }
     }
 
     public class AttributeSpecifier : CLanguageNode
     {
-        public System.Collections.Generic.List<ArgumentList> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ArgumentList> Children { get; set; }
         public AttributeSpecifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attribute_specifier");
@@ -344,13 +344,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ArgumentList(x)).ToList();
+                .Select(x => new ArgumentList(x));
         }
     }
 
     public class AttributedDeclarator : CLanguageNode, IDeclarator, IFieldDeclarator, ITypeDeclarator
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public AttributedDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attributed_declarator");
@@ -358,13 +358,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class AttributedStatement : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public AttributedStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attributed_statement");
@@ -372,7 +372,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -393,7 +393,7 @@ namespace TreeSitter.C.Nodes {
 
     public class BitfieldClause : CLanguageNode
     {
-        public System.Collections.Generic.List<IExpression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IExpression> Children { get; set; }
         public BitfieldClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "bitfield_clause");
@@ -401,7 +401,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IExpression) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IExpression) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -430,7 +430,7 @@ namespace TreeSitter.C.Nodes {
     public class CaseStatement : CLanguageNode, IStatement
     {
         public IExpression? Value { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public CaseStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "case_statement");
@@ -442,7 +442,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -461,7 +461,7 @@ namespace TreeSitter.C.Nodes {
 
     public class CharLiteral : CLanguageNode, IExpression
     {
-        public System.Collections.Generic.List<EscapeSequence> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<EscapeSequence> Children { get; set; }
         public CharLiteral(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "char_literal");
@@ -469,7 +469,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new EscapeSequence(x)).ToList();
+                .Select(x => new EscapeSequence(x));
         }
     }
 
@@ -501,7 +501,7 @@ namespace TreeSitter.C.Nodes {
 
     public class CompoundStatement : CLanguageNode, IStatement
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public CompoundStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "compound_statement");
@@ -509,13 +509,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class ConcatenatedString : CLanguageNode, IExpression
     {
-        public System.Collections.Generic.List<StringLiteral> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<StringLiteral> Children { get; set; }
         public ConcatenatedString(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "concatenated_string");
@@ -523,7 +523,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new StringLiteral(x)).ToList();
+                .Select(x => new StringLiteral(x));
         }
     }
 
@@ -553,25 +553,25 @@ namespace TreeSitter.C.Nodes {
 
     public class Declaration : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Declarator { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Declarator { get; set; }
         public ITypeSpecifier Type { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public Declaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "declaration");
             
-            this.Declarator = node.ChildrenByFieldName("declarator").Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+            this.Declarator = node.ChildrenByFieldName("declarator").Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
             this.Type = (ITypeSpecifier) CLanguageNode.FromNode(node.ChildByFieldName("type"))!;
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class DeclarationList : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public DeclarationList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "declaration_list");
@@ -579,7 +579,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -633,7 +633,7 @@ namespace TreeSitter.C.Nodes {
 
     public class EnumeratorList : CLanguageNode
     {
-        public System.Collections.Generic.List<Enumerator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Enumerator> Children { get; set; }
         public EnumeratorList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "enumerator_list");
@@ -641,13 +641,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Enumerator(x)).ToList();
+                .Select(x => new Enumerator(x));
         }
     }
 
     public class ExpressionStatement : CLanguageNode, IStatement
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ExpressionStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "expression_statement");
@@ -655,31 +655,31 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class FieldDeclaration : CLanguageNode
     {
-        public System.Collections.Generic.List<IFieldDeclarator> Declarator { get; set; }
+        public System.Collections.Generic.IEnumerable<IFieldDeclarator> Declarator { get; set; }
         public ITypeSpecifier Type { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public FieldDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "field_declaration");
             
-            this.Declarator = node.ChildrenByFieldName("declarator").Select(x => (IFieldDeclarator) CLanguageNode.FromNode(x)!).ToList();
+            this.Declarator = node.ChildrenByFieldName("declarator").Select(x => (IFieldDeclarator) CLanguageNode.FromNode(x)!);
             this.Type = (ITypeSpecifier) CLanguageNode.FromNode(node.ChildByFieldName("type"))!;
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class FieldDeclarationList : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public FieldDeclarationList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "field_declaration_list");
@@ -687,13 +687,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class FieldDesignator : CLanguageNode
     {
-        public System.Collections.Generic.List<FieldIdentifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<FieldIdentifier> Children { get; set; }
         public FieldDesignator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "field_designator");
@@ -701,7 +701,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new FieldIdentifier(x)).ToList();
+                .Select(x => new FieldIdentifier(x));
         }
     }
 
@@ -725,7 +725,7 @@ namespace TreeSitter.C.Nodes {
         public IExpression? Condition { get; set; }
         public CLanguageNode? Initializer { get; set; }
         public CLanguageNode? Update { get; set; }
-        public System.Collections.Generic.List<IStatement> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IStatement> Children { get; set; }
         public ForStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "for_statement");
@@ -745,7 +745,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IStatement) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IStatement) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -753,7 +753,7 @@ namespace TreeSitter.C.Nodes {
     {
         public CLanguageNode Declarator { get; set; }
         public ParameterList Parameters { get; set; }
-        public System.Collections.Generic.List<AttributeSpecifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<AttributeSpecifier> Children { get; set; }
         public FunctionDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "function_declarator");
@@ -763,7 +763,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new AttributeSpecifier(x)).ToList();
+                .Select(x => new AttributeSpecifier(x));
         }
     }
 
@@ -772,7 +772,7 @@ namespace TreeSitter.C.Nodes {
         public CompoundStatement Body { get; set; }
         public IDeclarator Declarator { get; set; }
         public ITypeSpecifier Type { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public FunctionDefinition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "function_definition");
@@ -783,7 +783,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -831,7 +831,7 @@ namespace TreeSitter.C.Nodes {
 
     public class InitializerList : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public InitializerList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "initializer_list");
@@ -839,19 +839,19 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class InitializerPair : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Designator { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Designator { get; set; }
         public CLanguageNode Value { get; set; }
         public InitializerPair(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "initializer_pair");
             
-            this.Designator = node.ChildrenByFieldName("designator").Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+            this.Designator = node.ChildrenByFieldName("designator").Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
             this.Value = (CLanguageNode) CLanguageNode.FromNode(node.ChildByFieldName("value"))!;
         }
     }
@@ -859,7 +859,7 @@ namespace TreeSitter.C.Nodes {
     public class LabeledStatement : CLanguageNode, IStatement
     {
         public StatementIdentifier Label { get; set; }
-        public System.Collections.Generic.List<IStatement> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IStatement> Children { get; set; }
         public LabeledStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "labeled_statement");
@@ -868,7 +868,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IStatement) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IStatement) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -900,7 +900,7 @@ namespace TreeSitter.C.Nodes {
 
     public class MsBasedModifier : CLanguageNode
     {
-        public System.Collections.Generic.List<ArgumentList> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ArgumentList> Children { get; set; }
         public MsBasedModifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "ms_based_modifier");
@@ -908,7 +908,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ArgumentList(x)).ToList();
+                .Select(x => new ArgumentList(x));
         }
     }
 
@@ -923,7 +923,7 @@ namespace TreeSitter.C.Nodes {
 
     public class MsDeclspecModifier : CLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public MsDeclspecModifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "ms_declspec_modifier");
@@ -931,13 +931,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class MsPointerModifier : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public MsPointerModifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "ms_pointer_modifier");
@@ -945,7 +945,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -962,7 +962,7 @@ namespace TreeSitter.C.Nodes {
     {
         public CLanguageNode? Declarator { get; set; }
         public ITypeSpecifier Type { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ParameterDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parameter_declaration");
@@ -975,13 +975,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParameterList : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ParameterList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parameter_list");
@@ -989,13 +989,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParenthesizedDeclarator : CLanguageNode, IDeclarator, IFieldDeclarator, ITypeDeclarator
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ParenthesizedDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_declarator");
@@ -1003,13 +1003,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParenthesizedExpression : CLanguageNode, IExpression
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ParenthesizedExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_expression");
@@ -1017,14 +1017,14 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class PointerDeclarator : CLanguageNode, IDeclarator, IFieldDeclarator, ITypeDeclarator
     {
         public CLanguageNode Declarator { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public PointerDeclarator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "pointer_declarator");
@@ -1033,7 +1033,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1084,7 +1084,7 @@ namespace TreeSitter.C.Nodes {
 
     public class PreprocDefined : CLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public PreprocDefined(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "preproc_defined");
@@ -1092,7 +1092,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
@@ -1100,7 +1100,7 @@ namespace TreeSitter.C.Nodes {
     {
         public CLanguageNode? Alternative { get; set; }
         public CLanguageNode Condition { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public PreprocElif(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "preproc_elif");
@@ -1113,13 +1113,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class PreprocElse : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public PreprocElse(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "preproc_else");
@@ -1127,7 +1127,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1153,7 +1153,7 @@ namespace TreeSitter.C.Nodes {
     {
         public CLanguageNode? Alternative { get; set; }
         public CLanguageNode Condition { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public PreprocIf(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "preproc_if");
@@ -1166,7 +1166,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1174,7 +1174,7 @@ namespace TreeSitter.C.Nodes {
     {
         public CLanguageNode? Alternative { get; set; }
         public Identifier Name { get; set; }
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public PreprocIfdef(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "preproc_ifdef");
@@ -1187,7 +1187,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1204,7 +1204,7 @@ namespace TreeSitter.C.Nodes {
 
     public class PreprocParams : CLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public PreprocParams(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "preproc_params");
@@ -1212,13 +1212,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class ReturnStatement : CLanguageNode, IStatement
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public ReturnStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "return_statement");
@@ -1226,7 +1226,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1274,7 +1274,7 @@ namespace TreeSitter.C.Nodes {
 
     public class StringLiteral : CLanguageNode, IExpression
     {
-        public System.Collections.Generic.List<EscapeSequence> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<EscapeSequence> Children { get; set; }
         public StringLiteral(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "string_literal");
@@ -1282,7 +1282,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new EscapeSequence(x)).ToList();
+                .Select(x => new EscapeSequence(x));
         }
     }
 
@@ -1290,7 +1290,7 @@ namespace TreeSitter.C.Nodes {
     {
         public FieldDeclarationList? Body { get; set; }
         public TypeIdentifier? Name { get; set; }
-        public System.Collections.Generic.List<MsDeclspecModifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<MsDeclspecModifier> Children { get; set; }
         public StructSpecifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "struct_specifier");
@@ -1306,13 +1306,13 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new MsDeclspecModifier(x)).ToList();
+                .Select(x => new MsDeclspecModifier(x));
         }
     }
 
     public class SubscriptDesignator : CLanguageNode
     {
-        public System.Collections.Generic.List<IExpression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IExpression> Children { get; set; }
         public SubscriptDesignator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "subscript_designator");
@@ -1320,7 +1320,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IExpression) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IExpression) CLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1352,7 +1352,7 @@ namespace TreeSitter.C.Nodes {
 
     public class TranslationUnit : CLanguageNode
     {
-        public System.Collections.Generic.List<CLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<CLanguageNode> Children { get; set; }
         public TranslationUnit(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "translation_unit");
@@ -1360,25 +1360,25 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (CLanguageNode) CLanguageNode.FromNode(x)!);
         }
     }
 
     public class TypeDefinition : CLanguageNode
     {
-        public System.Collections.Generic.List<ITypeDeclarator> Declarator { get; set; }
+        public System.Collections.Generic.IEnumerable<ITypeDeclarator> Declarator { get; set; }
         public ITypeSpecifier Type { get; set; }
-        public System.Collections.Generic.List<TypeQualifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeQualifier> Children { get; set; }
         public TypeDefinition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_definition");
             
-            this.Declarator = node.ChildrenByFieldName("declarator").Select(x => (ITypeDeclarator) CLanguageNode.FromNode(x)!).ToList();
+            this.Declarator = node.ChildrenByFieldName("declarator").Select(x => (ITypeDeclarator) CLanguageNode.FromNode(x)!);
             this.Type = (ITypeSpecifier) CLanguageNode.FromNode(node.ChildByFieldName("type"))!;
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeQualifier(x)).ToList();
+                .Select(x => new TypeQualifier(x));
         }
     }
 
@@ -1386,7 +1386,7 @@ namespace TreeSitter.C.Nodes {
     {
         public IAbstractDeclarator? Declarator { get; set; }
         public ITypeSpecifier Type { get; set; }
-        public System.Collections.Generic.List<TypeQualifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeQualifier> Children { get; set; }
         public TypeDescriptor(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_descriptor");
@@ -1399,7 +1399,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeQualifier(x)).ToList();
+                .Select(x => new TypeQualifier(x));
         }
     }
 
@@ -1429,7 +1429,7 @@ namespace TreeSitter.C.Nodes {
     {
         public FieldDeclarationList? Body { get; set; }
         public TypeIdentifier? Name { get; set; }
-        public System.Collections.Generic.List<MsDeclspecModifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<MsDeclspecModifier> Children { get; set; }
         public UnionSpecifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "union_specifier");
@@ -1445,7 +1445,7 @@ namespace TreeSitter.C.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new MsDeclspecModifier(x)).ToList();
+                .Select(x => new MsDeclspecModifier(x));
         }
     }
 

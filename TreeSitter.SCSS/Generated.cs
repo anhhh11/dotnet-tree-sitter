@@ -17,97 +17,97 @@ namespace TreeSitter.SCSS.Nodes {
             if (node is null) throw new System.ArgumentNullException(nameof(node));
             if (!node.IsNamed) return new SCSSLanguageNodeTerminalNode(node);
             switch (node.Kind) {
-                case "extend_statement": return new ExtendStatement(node);
-                case "single_line_comment": return new SingleLineComment(node);
-                case "parameter": return new Parameter(node);
-                case "from": return new From(node);
-                case "through": return new Through(node);
-                case "name": return new Name(node);
-                case "binary_query": return new BinaryQuery(node);
-                case "function_statement": return new FunctionStatement(node);
-                case "apply_statement": return new ApplyStatement(node);
-                case "supports_statement": return new SupportsStatement(node);
+                case "placeholder": return new Placeholder(node);
+                case "parameters": return new Parameters(node);
+                case "selector_query": return new SelectorQuery(node);
                 case "feature_name": return new FeatureName(node);
-                case "attribute_selector": return new AttributeSelector(node);
-                case "important": return new Important(node);
-                case "use_statement": return new UseStatement(node);
-                case "error_statement": return new ErrorStatement(node);
-                case "color_value": return new ColorValue(node);
-                case "integer_value": return new IntegerValue(node);
-                case "unary_query": return new UnaryQuery(node);
-                case "each_statement": return new EachStatement(node);
-                case "keyframe_block_list": return new KeyframeBlockList(node);
-                case "rule_set": return new RuleSet(node);
-                case "keyframes_name": return new KeyframesName(node);
-                case "value": return new Value(node);
+                case "argument_name": return new ArgumentName(node);
+                case "descendant_selector": return new DescendantSelector(node);
+                case "class_selector": return new ClassSelector(node);
+                case "pseudo_class_selector": return new PseudoClassSelector(node);
+                case "at_rule": return new AtRule(node);
                 case "else_if_clause": return new ElseIfClause(node);
                 case "keyword_query": return new KeywordQuery(node);
-                case "variable_value": return new VariableValue(node);
-                case "include_statement": return new IncludeStatement(node);
-                case "default_value": return new DefaultValue(node);
-                case "sibling_selector": return new SiblingSelector(node);
-                case "while_statement": return new WhileStatement(node);
-                case "to": return new To(node);
-                case "unit": return new Unit(node);
-                case "variable_name": return new VariableName(node);
-                case "namespace_statement": return new NamespaceStatement(node);
-                case "descendant_selector": return new DescendantSelector(node);
-                case "child_selector": return new ChildSelector(node);
-                case "class_selector": return new ClassSelector(node);
-                case "binary_expression": return new BinaryExpression(node);
-                case "mixin_statement": return new MixinStatement(node);
-                case "parenthesized_value": return new ParenthesizedValue(node);
-                case "at_keyword": return new AtKeyword(node);
+                case "key": return new Key(node);
+                case "nesting_selector": return new NestingSelector(node);
+                case "from": return new From(node);
+                case "arguments": return new Arguments(node);
+                case "declaration": return new Declaration(node);
+                case "rule_set": return new RuleSet(node);
+                case "keyframe_block": return new KeyframeBlock(node);
                 case "stylesheet": return new Stylesheet(node);
+                case "use_statement": return new UseStatement(node);
+                case "identifier": return new Identifier(node);
                 case "else_clause": return new ElseClause(node);
+                case "parenthesized_query": return new ParenthesizedQuery(node);
+                case "each_statement": return new EachStatement(node);
+                case "if_statement": return new IfStatement(node);
+                case "id_selector": return new IdSelector(node);
+                case "unit": return new Unit(node);
+                case "parameter": return new Parameter(node);
+                case "attribute_name": return new AttributeName(node);
+                case "charset_statement": return new CharsetStatement(node);
+                case "default_value": return new DefaultValue(node);
                 case "forward_statement": return new ForwardStatement(node);
+                case "function_name": return new FunctionName(node);
+                case "keyframes_name": return new KeyframesName(node);
+                case "value": return new Value(node);
+                case "if_clause": return new IfClause(node);
+                case "import_statement": return new ImportStatement(node);
+                case "string_value": return new StringValue(node);
+                case "function_statement": return new FunctionStatement(node);
+                case "namespace_name": return new NamespaceName(node);
+                case "parenthesized_value": return new ParenthesizedValue(node);
+                case "pseudo_element_selector": return new PseudoElementSelector(node);
+                case "single_line_comment": return new SingleLineComment(node);
+                case "id_name": return new IdName(node);
+                case "apply_statement": return new ApplyStatement(node);
+                case "feature_query": return new FeatureQuery(node);
+                case "supports_statement": return new SupportsStatement(node);
+                case "extend_statement": return new ExtendStatement(node);
+                case "variable_name": return new VariableName(node);
+                case "include_statement": return new IncludeStatement(node);
+                case "adjacent_sibling_selector": return new AdjacentSiblingSelector(node);
+                case "color_value": return new ColorValue(node);
+                case "debug_statement": return new DebugStatement(node);
+                case "unary_query": return new UnaryQuery(node);
+                case "binary_expression": return new BinaryExpression(node);
+                case "warn_statement": return new WarnStatement(node);
+                case "name": return new Name(node);
+                case "variable": return new Variable(node);
+                case "argument": return new Argument(node);
+                case "important": return new Important(node);
+                case "media_statement": return new MediaStatement(node);
+                case "integer_value": return new IntegerValue(node);
+                case "float_value": return new FloatValue(node);
+                case "to": return new To(node);
+                case "keyframes_statement": return new KeyframesStatement(node);
+                case "variable_value": return new VariableValue(node);
+                case "keyframe_block_list": return new KeyframeBlockList(node);
+                case "plain_value": return new PlainValue(node);
+                case "tag_name": return new TagName(node);
+                case "call_expression": return new CallExpression(node);
+                case "block": return new Block(node);
+                case "mixin_statement": return new MixinStatement(node);
+                case "at_keyword": return new AtKeyword(node);
+                case "while_statement": return new WhileStatement(node);
+                case "selectors": return new Selectors(node);
+                case "sibling_selector": return new SiblingSelector(node);
+                case "universal_selector": return new UniversalSelector(node);
+                case "error_statement": return new ErrorStatement(node);
+                case "through": return new Through(node);
+                case "property_name": return new PropertyName(node);
+                case "for_statement": return new ForStatement(node);
+                case "return_statement": return new ReturnStatement(node);
+                case "namespace_statement": return new NamespaceStatement(node);
+                case "child_selector": return new ChildSelector(node);
+                case "at_root_statement": return new AtRootStatement(node);
+                case "attribute_selector": return new AttributeSelector(node);
+                case "argument_value": return new ArgumentValue(node);
+                case "comment": return new Comment(node);
+                case "binary_query": return new BinaryQuery(node);
                 case "condition": return new Condition(node);
                 case "class_name": return new ClassName(node);
-                case "feature_query": return new FeatureQuery(node);
-                case "parenthesized_query": return new ParenthesizedQuery(node);
-                case "argument": return new Argument(node);
-                case "nesting_selector": return new NestingSelector(node);
-                case "argument_name": return new ArgumentName(node);
-                case "string_value": return new StringValue(node);
-                case "function_name": return new FunctionName(node);
-                case "if_statement": return new IfStatement(node);
-                case "import_statement": return new ImportStatement(node);
-                case "declaration": return new Declaration(node);
-                case "for_statement": return new ForStatement(node);
-                case "pseudo_class_selector": return new PseudoClassSelector(node);
-                case "universal_selector": return new UniversalSelector(node);
-                case "return_statement": return new ReturnStatement(node);
-                case "pseudo_element_selector": return new PseudoElementSelector(node);
-                case "at_root_statement": return new AtRootStatement(node);
-                case "warn_statement": return new WarnStatement(node);
-                case "adjacent_sibling_selector": return new AdjacentSiblingSelector(node);
-                case "selectors": return new Selectors(node);
-                case "namespace_name": return new NamespaceName(node);
-                case "plain_value": return new PlainValue(node);
-                case "media_statement": return new MediaStatement(node);
-                case "arguments": return new Arguments(node);
-                case "float_value": return new FloatValue(node);
-                case "id_selector": return new IdSelector(node);
-                case "keyframe_block": return new KeyframeBlock(node);
-                case "call_expression": return new CallExpression(node);
-                case "comment": return new Comment(node);
-                case "parameters": return new Parameters(node);
-                case "keyframes_statement": return new KeyframesStatement(node);
-                case "at_rule": return new AtRule(node);
-                case "charset_statement": return new CharsetStatement(node);
-                case "debug_statement": return new DebugStatement(node);
-                case "key": return new Key(node);
-                case "block": return new Block(node);
-                case "placeholder": return new Placeholder(node);
-                case "attribute_name": return new AttributeName(node);
-                case "argument_value": return new ArgumentValue(node);
-                case "tag_name": return new TagName(node);
-                case "identifier": return new Identifier(node);
-                case "selector_query": return new SelectorQuery(node);
-                case "property_name": return new PropertyName(node);
-                case "variable": return new Variable(node);
-                case "id_name": return new IdName(node);
-                case "if_clause": return new IfClause(node);
                 case "ERROR": return new ErrorNode(node);
                 default: throw new System.ArgumentException("unknown node type: " + node.Kind, nameof(node));
             }
@@ -138,7 +138,7 @@ namespace TreeSitter.SCSS.Nodes {
 
     public class AdjacentSiblingSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public AdjacentSiblingSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "adjacent_sibling_selector");
@@ -146,13 +146,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ApplyStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ApplyStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "apply_statement");
@@ -160,13 +160,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Argument : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Argument(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "argument");
@@ -174,13 +174,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ArgumentValue : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ArgumentValue(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "argument_value");
@@ -188,13 +188,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Arguments : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Arguments(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "arguments");
@@ -202,13 +202,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class AtRootStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public AtRootStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "at_root_statement");
@@ -216,13 +216,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class AtRule : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public AtRule(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "at_rule");
@@ -230,13 +230,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class AttributeSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public AttributeSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attribute_selector");
@@ -244,13 +244,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class BinaryExpression : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public BinaryExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "binary_expression");
@@ -258,13 +258,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class BinaryQuery : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public BinaryQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "binary_query");
@@ -272,13 +272,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Block : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Block(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "block");
@@ -286,13 +286,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class CallExpression : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public CallExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "call_expression");
@@ -300,13 +300,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class CharsetStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public CharsetStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "charset_statement");
@@ -314,13 +314,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ChildSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ChildSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "child_selector");
@@ -328,13 +328,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ClassSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ClassSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_selector");
@@ -342,7 +342,7 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
@@ -357,7 +357,7 @@ namespace TreeSitter.SCSS.Nodes {
 
     public class Condition : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Condition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "condition");
@@ -365,13 +365,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class DebugStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public DebugStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "debug_statement");
@@ -379,13 +379,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Declaration : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Declaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "declaration");
@@ -393,13 +393,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class DefaultValue : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public DefaultValue(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "default_value");
@@ -407,13 +407,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class DescendantSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public DescendantSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "descendant_selector");
@@ -421,13 +421,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class EachStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public EachStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "each_statement");
@@ -435,13 +435,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ElseClause : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<Block> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Block> Children { get; set; }
         public ElseClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "else_clause");
@@ -449,13 +449,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Block(x)).ToList();
+                .Select(x => new Block(x));
         }
     }
 
     public class ElseIfClause : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ElseIfClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "else_if_clause");
@@ -463,13 +463,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ErrorStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ErrorStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "error_statement");
@@ -477,13 +477,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExtendStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ExtendStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "extend_statement");
@@ -491,13 +491,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class FeatureQuery : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public FeatureQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "feature_query");
@@ -505,13 +505,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class FloatValue : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<Unit> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Unit> Children { get; set; }
         public FloatValue(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "float_value");
@@ -519,13 +519,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Unit(x)).ToList();
+                .Select(x => new Unit(x));
         }
     }
 
     public class ForStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ForStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "for_statement");
@@ -533,13 +533,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ForwardStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ForwardStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "forward_statement");
@@ -547,13 +547,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class From : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public From(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "from");
@@ -561,13 +561,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class FunctionStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public FunctionStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "function_statement");
@@ -575,13 +575,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class IdSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public IdSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "id_selector");
@@ -589,13 +589,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class IfClause : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public IfClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "if_clause");
@@ -603,13 +603,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class IfStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public IfStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "if_statement");
@@ -617,13 +617,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ImportStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ImportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_statement");
@@ -631,13 +631,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class IncludeStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public IncludeStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "include_statement");
@@ -645,13 +645,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class IntegerValue : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<Unit> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Unit> Children { get; set; }
         public IntegerValue(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "integer_value");
@@ -659,13 +659,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Unit(x)).ToList();
+                .Select(x => new Unit(x));
         }
     }
 
     public class KeyframeBlock : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public KeyframeBlock(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "keyframe_block");
@@ -673,13 +673,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class KeyframeBlockList : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<KeyframeBlock> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<KeyframeBlock> Children { get; set; }
         public KeyframeBlockList(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "keyframe_block_list");
@@ -687,13 +687,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new KeyframeBlock(x)).ToList();
+                .Select(x => new KeyframeBlock(x));
         }
     }
 
     public class KeyframesStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public KeyframesStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "keyframes_statement");
@@ -701,13 +701,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class MediaStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public MediaStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "media_statement");
@@ -715,13 +715,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class MixinStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public MixinStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "mixin_statement");
@@ -729,13 +729,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class NamespaceStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public NamespaceStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "namespace_statement");
@@ -743,13 +743,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Parameter : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Parameter(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parameter");
@@ -757,13 +757,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Parameters : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<Parameter> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Parameter> Children { get; set; }
         public Parameters(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parameters");
@@ -771,13 +771,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Parameter(x)).ToList();
+                .Select(x => new Parameter(x));
         }
     }
 
     public class ParenthesizedQuery : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ParenthesizedQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_query");
@@ -785,13 +785,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParenthesizedValue : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ParenthesizedValue(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_value");
@@ -799,13 +799,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Placeholder : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Placeholder(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "placeholder");
@@ -813,13 +813,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class PseudoClassSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public PseudoClassSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "pseudo_class_selector");
@@ -827,13 +827,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class PseudoElementSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public PseudoElementSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "pseudo_element_selector");
@@ -841,13 +841,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class ReturnStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public ReturnStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "return_statement");
@@ -855,13 +855,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class RuleSet : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public RuleSet(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "rule_set");
@@ -869,13 +869,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class SelectorQuery : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public SelectorQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "selector_query");
@@ -883,13 +883,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Selectors : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Selectors(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "selectors");
@@ -897,13 +897,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class SiblingSelector : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public SiblingSelector(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "sibling_selector");
@@ -911,13 +911,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Stylesheet : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Stylesheet(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "stylesheet");
@@ -925,13 +925,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class SupportsStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public SupportsStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "supports_statement");
@@ -939,13 +939,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class Through : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public Through(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "through");
@@ -953,13 +953,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class UnaryQuery : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public UnaryQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "unary_query");
@@ -967,7 +967,7 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
@@ -982,7 +982,7 @@ namespace TreeSitter.SCSS.Nodes {
 
     public class UseStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public UseStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "use_statement");
@@ -990,13 +990,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class WarnStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public WarnStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "warn_statement");
@@ -1004,13 +1004,13 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 
     public class WhileStatement : SCSSLanguageNode
     {
-        public System.Collections.Generic.List<SCSSLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<SCSSLanguageNode> Children { get; set; }
         public WhileStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "while_statement");
@@ -1018,7 +1018,7 @@ namespace TreeSitter.SCSS.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (SCSSLanguageNode) SCSSLanguageNode.FromNode(x)!);
         }
     }
 

@@ -91,10 +91,10 @@ GETTER_CHILDREN = """node.NamedChildrenWithFields
                 """
 
 CLASS_MULTI_EXACT = """
-            this.{fieldName} = {getter}.Select(x => new {bfType}(x)).ToList();"""
+            this.{fieldName} = {getter}.Select(x => new {bfType}(x));"""
 
 CLASS_MULTI_UNKNOWN = """
-            this.{fieldName} = {getter}.Select(x => ({bfType}) {langclass}.FromNode(x)!).ToList();"""
+            this.{fieldName} = {getter}.Select(x => ({bfType}) {langclass}.FromNode(x)!);"""
 
 CLASS_FIELD_MAP = {
     ("x", None): CLASS_FIELD_EXACT,
@@ -251,7 +251,7 @@ def generate(inputFile, outputFile, langname):
                     bfType = fieldType
                     cardConv = None
                     if fieldCard == "*" or fieldName == "children":
-                        fieldType = "System.Collections.Generic.List<" + fieldType + ">"
+                        fieldType = "System.Collections.Generic.IEnumerable<" + fieldType + ">"
                         cardConv = "*"
                     elif fieldCard == "?":
                         fieldType = fieldType + "?"

@@ -17,188 +17,188 @@ namespace TreeSitter.Typescript.Nodes {
             if (node is null) throw new System.ArgumentNullException(nameof(node));
             if (!node.IsNamed) return new TypescriptLanguageNodeTerminalNode(node);
             switch (node.Kind) {
-                case "class_body": return new ClassBody(node);
-                case "regex_pattern": return new RegexPattern(node);
-                case "class_static_block": return new ClassStaticBlock(node);
-                case "required_parameter": return new RequiredParameter(node);
-                case "generic_type": return new GenericType(node);
-                case "jsx_self_closing_element": return new JsxSelfClosingElement(node);
-                case "expression_statement": return new ExpressionStatement(node);
-                case "for_in_statement": return new ForInStatement(node);
-                case "import_specifier": return new ImportSpecifier(node);
-                case "number": return new Number(node);
-                case "debugger_statement": return new DebuggerStatement(node);
-                case "decorator": return new Decorator(node);
-                case "intersection_type": return new IntersectionType(node);
-                case "hash_bang_line": return new HashBangLine(node);
-                case "tuple_type": return new TupleType(node);
-                case "function_type": return new FunctionType(node);
-                case "property_signature": return new PropertySignature(node);
-                case "program": return new Program(node);
-                case "import_clause": return new ImportClause(node);
-                case "flow_maybe_type": return new FlowMaybeType(node);
-                case "literal_type": return new LiteralType(node);
-                case "function_declaration": return new FunctionDeclaration(node);
-                case "jsx_closing_element": return new JsxClosingElement(node);
-                case "implements_clause": return new ImplementsClause(node);
-                case "try_statement": return new TryStatement(node);
-                case "pair_pattern": return new PairPattern(node);
-                case "optional_type": return new OptionalType(node);
-                case "new_expression": return new NewExpression(node);
-                case "parenthesized_type": return new ParenthesizedType(node);
-                case "jsx_attribute": return new JsxAttribute(node);
-                case "arrow_function": return new ArrowFunction(node);
-                case "statement_identifier": return new StatementIdentifier(node);
-                case "jsx_opening_element": return new JsxOpeningElement(node);
-                case "import_require_clause": return new ImportRequireClause(node);
-                case "object_type": return new ObjectType(node);
-                case "existential_type": return new ExistentialType(node);
-                case "optional_parameter": return new OptionalParameter(node);
-                case "named_imports": return new NamedImports(node);
-                case "namespace_export": return new NamespaceExport(node);
-                case "readonly_type": return new ReadonlyType(node);
-                case "switch_statement": return new SwitchStatement(node);
-                case "array_pattern": return new ArrayPattern(node);
-                case "index_type_query": return new IndexTypeQuery(node);
-                case "type_predicate": return new TypePredicate(node);
-                case "unary_expression": return new UnaryExpression(node);
-                case "break_statement": return new BreakStatement(node);
-                case "generator_function_declaration": return new GeneratorFunctionDeclaration(node);
-                case "property_identifier": return new PropertyIdentifier(node);
-                case "while_statement": return new WhileStatement(node);
-                case "array_type": return new ArrayType(node);
-                case "default_type": return new DefaultType(node);
-                case "index_signature": return new IndexSignature(node);
-                case "type_annotation": return new TypeAnnotation(node);
-                case "enum_body": return new EnumBody(node);
-                case "template_type": return new TemplateType(node);
-                case "jsx_element": return new JsxElement(node);
-                case "this": return new This(node);
-                case "asserts": return new Asserts(node);
-                case "regex_flags": return new RegexFlags(node);
-                case "construct_signature": return new ConstructSignature(node);
-                case "nested_identifier": return new NestedIdentifier(node);
-                case "rest_type": return new RestType(node);
-                case "ambient_declaration": return new AmbientDeclaration(node);
-                case "binary_expression": return new BinaryExpression(node);
-                case "union_type": return new UnionType(node);
-                case "import_alias": return new ImportAlias(node);
-                case "variable_declaration": return new VariableDeclaration(node);
-                case "extends_clause": return new ExtendsClause(node);
-                case "template_string": return new TemplateString(node);
-                case "throw_statement": return new ThrowStatement(node);
-                case "omitting_type_annotation": return new OmittingTypeAnnotation(node);
-                case "nested_type_identifier": return new NestedTypeIdentifier(node);
-                case "else_clause": return new ElseClause(node);
-                case "glimmer_template": return new GlimmerTemplate(node);
-                case "internal_module": return new InternalModule(node);
-                case "lookup_type": return new LookupType(node);
-                case "mapped_type_clause": return new MappedTypeClause(node);
-                case "non_null_expression": return new NonNullExpression(node);
-                case "assignment_pattern": return new AssignmentPattern(node);
-                case "assignment_expression": return new AssignmentExpression(node);
-                case "object_assignment_pattern": return new ObjectAssignmentPattern(node);
-                case "method_definition": return new MethodDefinition(node);
-                case "public_field_definition": return new PublicFieldDefinition(node);
-                case "glimmer_opening_tag": return new GlimmerOpeningTag(node);
-                case "continue_statement": return new ContinueStatement(node);
-                case "optional_chain": return new OptionalChain(node);
-                case "glimmer_closing_tag": return new GlimmerClosingTag(node);
-                case "if_statement": return new IfStatement(node);
-                case "import_statement": return new ImportStatement(node);
-                case "subscript_expression": return new SubscriptExpression(node);
-                case "super": return new Super(node);
-                case "member_expression": return new MemberExpression(node);
-                case "type_alias_declaration": return new TypeAliasDeclaration(node);
-                case "empty_statement": return new EmptyStatement(node);
-                case "catch_clause": return new CatchClause(node);
-                case "export_specifier": return new ExportSpecifier(node);
-                case "constructor_type": return new ConstructorType(node);
-                case "enum_assignment": return new EnumAssignment(node);
-                case "for_statement": return new ForStatement(node);
-                case "type_query": return new TypeQuery(node);
-                case "class_declaration": return new ClassDeclaration(node);
-                case "this_type": return new ThisType(node);
-                case "template_substitution": return new TemplateSubstitution(node);
-                case "meta_property": return new MetaProperty(node);
-                case "conditional_type": return new ConditionalType(node);
-                case "module": return new Module(node);
-                case "labeled_statement": return new LabeledStatement(node);
-                case "opting_type_annotation": return new OptingTypeAnnotation(node);
-                case "switch_body": return new SwitchBody(node);
-                case "shorthand_property_identifier": return new ShorthandPropertyIdentifier(node);
-                case "variable_declarator": return new VariableDeclarator(node);
-                case "infer_type": return new InferType(node);
-                case "jsx_text": return new JsxText(node);
-                case "null": return new Null(node);
-                case "jsx_fragment": return new JsxFragment(node);
-                case "predefined_type": return new PredefinedType(node);
-                case "return_statement": return new ReturnStatement(node);
-                case "switch_default": return new SwitchDefault(node);
-                case "true": return new True(node);
-                case "export_clause": return new ExportClause(node);
-                case "as_expression": return new AsExpression(node);
-                case "await_expression": return new AwaitExpression(node);
-                case "shorthand_property_identifier_pattern": return new ShorthandPropertyIdentifierPattern(node);
-                case "formal_parameters": return new FormalParameters(node);
-                case "sequence_expression": return new SequenceExpression(node);
-                case "augmented_assignment_expression": return new AugmentedAssignmentExpression(node);
-                case "statement_block": return new StatementBlock(node);
-                case "regex": return new Regex(node);
-                case "abstract_method_signature": return new AbstractMethodSignature(node);
-                case "type_parameters": return new TypeParameters(node);
-                case "parenthesized_expression": return new ParenthesizedExpression(node);
-                case "class_heritage": return new ClassHeritage(node);
-                case "call_signature": return new CallSignature(node);
-                case "constraint": return new Constraint(node);
-                case "generator_function": return new GeneratorFunction(node);
-                case "abstract_class_declaration": return new AbstractClassDeclaration(node);
-                case "array": return new Array(node);
-                case "lexical_declaration": return new LexicalDeclaration(node);
-                case "type_identifier": return new TypeIdentifier(node);
-                case "interface_declaration": return new InterfaceDeclaration(node);
-                case "false": return new False(node);
                 case "string_fragment": return new StringFragment(node);
-                case "jsx_namespace_name": return new JsxNamespaceName(node);
-                case "function": return new Function(node);
-                case "update_expression": return new UpdateExpression(node);
-                case "export_statement": return new ExportStatement(node);
-                case "finally_clause": return new FinallyClause(node);
-                case "arguments": return new Arguments(node);
-                case "type_parameter": return new TypeParameter(node);
-                case "accessibility_modifier": return new AccessibilityModifier(node);
-                case "override_modifier": return new OverrideModifier(node);
-                case "template_literal_type": return new TemplateLiteralType(node);
-                case "pair": return new Pair(node);
-                case "object": return new Object(node);
-                case "object_pattern": return new ObjectPattern(node);
-                case "method_signature": return new MethodSignature(node);
+                case "throw_statement": return new ThrowStatement(node);
                 case "satisfies_expression": return new SatisfiesExpression(node);
+                case "namespace_import": return new NamespaceImport(node);
+                case "generic_type": return new GenericType(node);
+                case "interface_declaration": return new InterfaceDeclaration(node);
+                case "flow_maybe_type": return new FlowMaybeType(node);
+                case "non_null_expression": return new NonNullExpression(node);
+                case "variable_declaration": return new VariableDeclaration(node);
+                case "expression_statement": return new ExpressionStatement(node);
+                case "internal_module": return new InternalModule(node);
+                case "class_heritage": return new ClassHeritage(node);
+                case "generator_function": return new GeneratorFunction(node);
+                case "array_pattern": return new ArrayPattern(node);
+                case "type_query": return new TypeQuery(node);
+                case "do_statement": return new DoStatement(node);
+                case "index_signature": return new IndexSignature(node);
+                case "break_statement": return new BreakStatement(node);
+                case "for_in_statement": return new ForInStatement(node);
+                case "construct_signature": return new ConstructSignature(node);
+                case "arguments": return new Arguments(node);
+                case "nested_identifier": return new NestedIdentifier(node);
+                case "super": return new Super(node);
+                case "function_declaration": return new FunctionDeclaration(node);
+                case "regex": return new Regex(node);
+                case "type_parameters": return new TypeParameters(node);
+                case "jsx_attribute": return new JsxAttribute(node);
+                case "computed_property_name": return new ComputedPropertyName(node);
+                case "jsx_self_closing_element": return new JsxSelfClosingElement(node);
+                case "new_expression": return new NewExpression(node);
+                case "call_signature": return new CallSignature(node);
+                case "module": return new Module(node);
+                case "method_definition": return new MethodDefinition(node);
+                case "array": return new Array(node);
+                case "lookup_type": return new LookupType(node);
+                case "export_clause": return new ExportClause(node);
+                case "conditional_type": return new ConditionalType(node);
+                case "empty_statement": return new EmptyStatement(node);
+                case "await_expression": return new AwaitExpression(node);
+                case "unary_expression": return new UnaryExpression(node);
+                case "identifier": return new Identifier(node);
+                case "arrow_function": return new ArrowFunction(node);
+                case "jsx_opening_element": return new JsxOpeningElement(node);
+                case "else_clause": return new ElseClause(node);
+                case "if_statement": return new IfStatement(node);
+                case "import_specifier": return new ImportSpecifier(node);
+                case "opting_type_annotation": return new OptingTypeAnnotation(node);
+                case "asserts": return new Asserts(node);
+                case "export_specifier": return new ExportSpecifier(node);
+                case "optional_parameter": return new OptionalParameter(node);
+                case "abstract_method_signature": return new AbstractMethodSignature(node);
+                case "mapped_type_clause": return new MappedTypeClause(node);
+                case "object_type": return new ObjectType(node);
+                case "rest_type": return new RestType(node);
+                case "object_assignment_pattern": return new ObjectAssignmentPattern(node);
+                case "pair": return new Pair(node);
+                case "null": return new Null(node);
+                case "constraint": return new Constraint(node);
+                case "shorthand_property_identifier_pattern": return new ShorthandPropertyIdentifierPattern(node);
+                case "subscript_expression": return new SubscriptExpression(node);
+                case "lexical_declaration": return new LexicalDeclaration(node);
+                case "enum_declaration": return new EnumDeclaration(node);
+                case "abstract_class_declaration": return new AbstractClassDeclaration(node);
+                case "export_statement": return new ExportStatement(node);
+                case "labeled_statement": return new LabeledStatement(node);
+                case "type_predicate": return new TypePredicate(node);
+                case "continue_statement": return new ContinueStatement(node);
+                case "function": return new Function(node);
+                case "import_statement": return new ImportStatement(node);
+                case "jsx_fragment": return new JsxFragment(node);
+                case "function_signature": return new FunctionSignature(node);
+                case "infer_type": return new InferType(node);
+                case "pair_pattern": return new PairPattern(node);
+                case "ternary_expression": return new TernaryExpression(node);
+                case "jsx_text": return new JsxText(node);
+                case "decorator": return new Decorator(node);
+                case "type_annotation": return new TypeAnnotation(node);
+                case "import_clause": return new ImportClause(node);
+                case "property_identifier": return new PropertyIdentifier(node);
+                case "template_type": return new TemplateType(node);
+                case "named_imports": return new NamedImports(node);
+                case "predefined_type": return new PredefinedType(node);
+                case "number": return new Number(node);
+                case "index_type_query": return new IndexTypeQuery(node);
+                case "as_expression": return new AsExpression(node);
+                case "nested_type_identifier": return new NestedTypeIdentifier(node);
+                case "type_parameter": return new TypeParameter(node);
+                case "statement_identifier": return new StatementIdentifier(node);
+                case "extends_type_clause": return new ExtendsTypeClause(node);
+                case "this": return new This(node);
+                case "override_modifier": return new OverrideModifier(node);
+                case "finally_clause": return new FinallyClause(node);
+                case "optional_chain": return new OptionalChain(node);
+                case "glimmer_opening_tag": return new GlimmerOpeningTag(node);
+                case "method_signature": return new MethodSignature(node);
+                case "try_statement": return new TryStatement(node);
+                case "private_property_identifier": return new PrivatePropertyIdentifier(node);
+                case "glimmer_closing_tag": return new GlimmerClosingTag(node);
+                case "catch_clause": return new CatchClause(node);
+                case "jsx_closing_element": return new JsxClosingElement(node);
+                case "program": return new Program(node);
+                case "escape_sequence": return new EscapeSequence(node);
+                case "ambient_declaration": return new AmbientDeclaration(node);
+                case "optional_type": return new OptionalType(node);
+                case "spread_element": return new SpreadElement(node);
+                case "type_arguments": return new TypeArguments(node);
+                case "binary_expression": return new BinaryExpression(node);
+                case "yield_expression": return new YieldExpression(node);
+                case "omitting_type_annotation": return new OmittingTypeAnnotation(node);
+                case "function_type": return new FunctionType(node);
+                case "required_parameter": return new RequiredParameter(node);
+                case "enum_body": return new EnumBody(node);
+                case "formal_parameters": return new FormalParameters(node);
+                case "jsx_expression": return new JsxExpression(node);
+                case "sequence_expression": return new SequenceExpression(node);
+                case "import_require_clause": return new ImportRequireClause(node);
                 case "type_assertion": return new TypeAssertion(node);
                 case "type_predicate_annotation": return new TypePredicateAnnotation(node);
-                case "string": return new String(node);
-                case "class": return new Class(node);
-                case "call_expression": return new CallExpression(node);
-                case "ternary_expression": return new TernaryExpression(node);
-                case "comment": return new Comment(node);
-                case "extends_type_clause": return new ExtendsTypeClause(node);
-                case "type_arguments": return new TypeArguments(node);
-                case "with_statement": return new WithStatement(node);
-                case "private_property_identifier": return new PrivatePropertyIdentifier(node);
-                case "namespace_import": return new NamespaceImport(node);
-                case "computed_property_name": return new ComputedPropertyName(node);
-                case "do_statement": return new DoStatement(node);
-                case "spread_element": return new SpreadElement(node);
-                case "yield_expression": return new YieldExpression(node);
-                case "escape_sequence": return new EscapeSequence(node);
-                case "enum_declaration": return new EnumDeclaration(node);
+                case "shorthand_property_identifier": return new ShorthandPropertyIdentifier(node);
+                case "this_type": return new ThisType(node);
                 case "undefined": return new Undefined(node);
-                case "function_signature": return new FunctionSignature(node);
+                case "object": return new Object(node);
+                case "template_literal_type": return new TemplateLiteralType(node);
+                case "statement_block": return new StatementBlock(node);
+                case "parenthesized_type": return new ParenthesizedType(node);
+                case "true": return new True(node);
+                case "hash_bang_line": return new HashBangLine(node);
+                case "literal_type": return new LiteralType(node);
+                case "variable_declarator": return new VariableDeclarator(node);
+                case "accessibility_modifier": return new AccessibilityModifier(node);
+                case "import_alias": return new ImportAlias(node);
+                case "namespace_export": return new NamespaceExport(node);
+                case "jsx_element": return new JsxElement(node);
+                case "call_expression": return new CallExpression(node);
+                case "class": return new Class(node);
+                case "member_expression": return new MemberExpression(node);
+                case "regex_pattern": return new RegexPattern(node);
                 case "rest_pattern": return new RestPattern(node);
-                case "identifier": return new Identifier(node);
-                case "switch_case": return new SwitchCase(node);
+                case "extends_clause": return new ExtendsClause(node);
+                case "string": return new String(node);
+                case "tuple_type": return new TupleType(node);
+                case "existential_type": return new ExistentialType(node);
+                case "template_substitution": return new TemplateSubstitution(node);
+                case "class_body": return new ClassBody(node);
+                case "type_alias_declaration": return new TypeAliasDeclaration(node);
+                case "property_signature": return new PropertySignature(node);
+                case "switch_statement": return new SwitchStatement(node);
+                case "update_expression": return new UpdateExpression(node);
+                case "augmented_assignment_expression": return new AugmentedAssignmentExpression(node);
+                case "object_pattern": return new ObjectPattern(node);
                 case "import": return new Import(node);
-                case "jsx_expression": return new JsxExpression(node);
+                case "with_statement": return new WithStatement(node);
+                case "readonly_type": return new ReadonlyType(node);
+                case "while_statement": return new WhileStatement(node);
+                case "default_type": return new DefaultType(node);
+                case "false": return new False(node);
+                case "implements_clause": return new ImplementsClause(node);
+                case "parenthesized_expression": return new ParenthesizedExpression(node);
+                case "switch_case": return new SwitchCase(node);
+                case "union_type": return new UnionType(node);
+                case "template_string": return new TemplateString(node);
+                case "for_statement": return new ForStatement(node);
+                case "comment": return new Comment(node);
+                case "class_static_block": return new ClassStaticBlock(node);
+                case "intersection_type": return new IntersectionType(node);
+                case "meta_property": return new MetaProperty(node);
+                case "constructor_type": return new ConstructorType(node);
+                case "debugger_statement": return new DebuggerStatement(node);
+                case "switch_body": return new SwitchBody(node);
+                case "array_type": return new ArrayType(node);
+                case "return_statement": return new ReturnStatement(node);
+                case "public_field_definition": return new PublicFieldDefinition(node);
+                case "jsx_namespace_name": return new JsxNamespaceName(node);
+                case "class_declaration": return new ClassDeclaration(node);
+                case "switch_default": return new SwitchDefault(node);
+                case "assignment_expression": return new AssignmentExpression(node);
+                case "glimmer_template": return new GlimmerTemplate(node);
+                case "assignment_pattern": return new AssignmentPattern(node);
+                case "regex_flags": return new RegexFlags(node);
+                case "enum_assignment": return new EnumAssignment(node);
+                case "generator_function_declaration": return new GeneratorFunctionDeclaration(node);
+                case "type_identifier": return new TypeIdentifier(node);
                 case "ERROR": return new ErrorNode(node);
                 default: throw new System.ArgumentException("unknown node type: " + node.Kind, nameof(node));
             }
@@ -254,16 +254,16 @@ namespace TreeSitter.Typescript.Nodes {
     public class AbstractClassDeclaration : TypescriptLanguageNode, Declaration
     {
         public ClassBody Body { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public TypeIdentifier Name { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<ClassHeritage> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ClassHeritage> Children { get; set; }
         public AbstractClassDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "abstract_class_declaration");
             
             this.Body = new ClassBody(node.ChildByFieldName("body"));
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             this.Name = new TypeIdentifier(node.ChildByFieldName("name"));
             {
                 var tmp = node.ChildByFieldName("type_parameters");
@@ -272,7 +272,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ClassHeritage(x)).ToList();
+                .Select(x => new ClassHeritage(x));
         }
     }
 
@@ -282,7 +282,7 @@ namespace TreeSitter.Typescript.Nodes {
         public FormalParameters Parameters { get; set; }
         public TypescriptLanguageNode? ReturnType { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<AccessibilityModifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<AccessibilityModifier> Children { get; set; }
         public AbstractMethodSignature(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "abstract_method_signature");
@@ -300,7 +300,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new AccessibilityModifier(x)).ToList();
+                .Select(x => new AccessibilityModifier(x));
         }
     }
 
@@ -315,7 +315,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class AmbientDeclaration : TypescriptLanguageNode, Declaration
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public AmbientDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "ambient_declaration");
@@ -323,13 +323,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class Arguments : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Arguments(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "arguments");
@@ -337,13 +337,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class Array : TypescriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Array(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "array");
@@ -351,13 +351,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ArrayPattern : TypescriptLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ArrayPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "array_pattern");
@@ -365,13 +365,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ArrayType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<IPrimaryType> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IPrimaryType> Children { get; set; }
         public ArrayType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "array_type");
@@ -379,7 +379,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IPrimaryType) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IPrimaryType) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -416,7 +416,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class AsExpression : TypescriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public AsExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "as_expression");
@@ -424,13 +424,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class Asserts : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Asserts(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "asserts");
@@ -438,7 +438,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -485,7 +485,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class AwaitExpression : TypescriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public AwaitExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "await_expression");
@@ -493,7 +493,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -589,16 +589,16 @@ namespace TreeSitter.Typescript.Nodes {
     public class Class : TypescriptLanguageNode, PrimaryExpression
     {
         public ClassBody Body { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public TypeIdentifier? Name { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<ClassHeritage> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ClassHeritage> Children { get; set; }
         public Class(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class");
             
             this.Body = new ClassBody(node.ChildByFieldName("body"));
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             {
                 var tmp = node.ChildByFieldName("name");
                 this.Name = tmp is null ? null : new TypeIdentifier(tmp);
@@ -610,13 +610,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ClassHeritage(x)).ToList();
+                .Select(x => new ClassHeritage(x));
         }
     }
 
     public class ClassBody : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ClassBody(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_body");
@@ -624,23 +624,23 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ClassDeclaration : TypescriptLanguageNode, Declaration
     {
         public ClassBody Body { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public TypeIdentifier Name { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<ClassHeritage> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ClassHeritage> Children { get; set; }
         public ClassDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_declaration");
             
             this.Body = new ClassBody(node.ChildByFieldName("body"));
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             this.Name = new TypeIdentifier(node.ChildByFieldName("name"));
             {
                 var tmp = node.ChildByFieldName("type_parameters");
@@ -649,13 +649,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ClassHeritage(x)).ToList();
+                .Select(x => new ClassHeritage(x));
         }
     }
 
     public class ClassHeritage : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ClassHeritage(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_heritage");
@@ -663,7 +663,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -680,7 +680,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ComputedPropertyName : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ComputedPropertyName(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "computed_property_name");
@@ -688,7 +688,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -711,7 +711,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class Constraint : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Constraint(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "constraint");
@@ -719,7 +719,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -787,7 +787,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class Decorator : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Decorator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "decorator");
@@ -795,13 +795,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class DefaultType : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public DefaultType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "default_type");
@@ -809,7 +809,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -828,7 +828,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ElseClause : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Statement> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Children { get; set; }
         public ElseClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "else_clause");
@@ -836,7 +836,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -864,17 +864,17 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class EnumBody : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Name { get; set; }
-        public System.Collections.Generic.List<EnumAssignment> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Name { get; set; }
+        public System.Collections.Generic.IEnumerable<EnumAssignment> Children { get; set; }
         public EnumBody(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "enum_body");
             
-            this.Name = node.ChildrenByFieldName("name").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.Name = node.ChildrenByFieldName("name").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new EnumAssignment(x)).ToList();
+                .Select(x => new EnumAssignment(x));
         }
     }
 
@@ -902,7 +902,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ExportClause : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<ExportSpecifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ExportSpecifier> Children { get; set; }
         public ExportClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "export_clause");
@@ -910,7 +910,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ExportSpecifier(x)).ToList();
+                .Select(x => new ExportSpecifier(x));
         }
     }
 
@@ -933,10 +933,10 @@ namespace TreeSitter.Typescript.Nodes {
     public class ExportStatement : TypescriptLanguageNode, Statement
     {
         public Declaration? Declaration { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public String? Source { get; set; }
         public Expression? Value { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ExportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "export_statement");
@@ -945,7 +945,7 @@ namespace TreeSitter.Typescript.Nodes {
                 var tmp = node.ChildByFieldName("declaration");
                 this.Declaration = tmp is null ? null : (Declaration) TypescriptLanguageNode.FromNode(tmp);
             }
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             {
                 var tmp = node.ChildByFieldName("source");
                 this.Source = tmp is null ? null : new String(tmp);
@@ -957,13 +957,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExpressionStatement : TypescriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ExpressionStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "expression_statement");
@@ -971,31 +971,31 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExtendsClause : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypeArguments> TypeArguments { get; set; }
-        public System.Collections.Generic.List<Expression> Value { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeArguments> TypeArguments { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Value { get; set; }
         public ExtendsClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "extends_clause");
             
-            this.TypeArguments = node.ChildrenByFieldName("type_arguments").Select(x => new TypeArguments(x)).ToList();
-            this.Value = node.ChildrenByFieldName("value").Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.TypeArguments = node.ChildrenByFieldName("type_arguments").Select(x => new TypeArguments(x));
+            this.Value = node.ChildrenByFieldName("value").Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExtendsTypeClause : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Type { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Type { get; set; }
         public ExtendsTypeClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "extends_type_clause");
             
-            this.Type = node.ChildrenByFieldName("type").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.Type = node.ChildrenByFieldName("type").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1012,7 +1012,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class FlowMaybeType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<IPrimaryType> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IPrimaryType> Children { get; set; }
         public FlowMaybeType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "flow_maybe_type");
@@ -1020,7 +1020,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IPrimaryType) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IPrimaryType) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1073,7 +1073,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class FormalParameters : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public FormalParameters(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "formal_parameters");
@@ -1081,7 +1081,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1305,7 +1305,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ImplementsClause : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ImplementsClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "implements_clause");
@@ -1313,7 +1313,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1328,7 +1328,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ImportAlias : TypescriptLanguageNode, Declaration
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ImportAlias(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_alias");
@@ -1336,13 +1336,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ImportClause : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ImportClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_clause");
@@ -1350,14 +1350,14 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ImportRequireClause : TypescriptLanguageNode
     {
         public String Source { get; set; }
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public ImportRequireClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_require_clause");
@@ -1366,7 +1366,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
@@ -1389,7 +1389,7 @@ namespace TreeSitter.Typescript.Nodes {
     public class ImportStatement : TypescriptLanguageNode, Statement
     {
         public String? Source { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ImportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_statement");
@@ -1401,7 +1401,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1411,7 +1411,7 @@ namespace TreeSitter.Typescript.Nodes {
         public Identifier? Name { get; set; }
         public TypescriptLanguageNodeTerminalNode? Sign { get; set; }
         public TypescriptLanguageNode Type { get; set; }
-        public System.Collections.Generic.List<MappedTypeClause> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<MappedTypeClause> Children { get; set; }
         public IndexSignature(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "index_signature");
@@ -1432,13 +1432,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new MappedTypeClause(x)).ToList();
+                .Select(x => new MappedTypeClause(x));
         }
     }
 
     public class IndexTypeQuery : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<IPrimaryType> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<IPrimaryType> Children { get; set; }
         public IndexTypeQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "index_type_query");
@@ -1446,13 +1446,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (IPrimaryType) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (IPrimaryType) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class InferType : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypeIdentifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeIdentifier> Children { get; set; }
         public InferType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "infer_type");
@@ -1460,7 +1460,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeIdentifier(x)).ToList();
+                .Select(x => new TypeIdentifier(x));
         }
     }
 
@@ -1469,7 +1469,7 @@ namespace TreeSitter.Typescript.Nodes {
         public ObjectType Body { get; set; }
         public TypeIdentifier Name { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<ExtendsTypeClause> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ExtendsTypeClause> Children { get; set; }
         public InterfaceDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "interface_declaration");
@@ -1483,7 +1483,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ExtendsTypeClause(x)).ToList();
+                .Select(x => new ExtendsTypeClause(x));
         }
     }
 
@@ -1505,7 +1505,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class IntersectionType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public IntersectionType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "intersection_type");
@@ -1513,13 +1513,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxAttribute : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public JsxAttribute(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_attribute");
@@ -1527,7 +1527,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1546,7 +1546,7 @@ namespace TreeSitter.Typescript.Nodes {
     {
         public JsxClosingElement CloseTag { get; set; }
         public JsxOpeningElement OpenTag { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public JsxElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_element");
@@ -1556,13 +1556,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxExpression : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public JsxExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_expression");
@@ -1570,13 +1570,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxFragment : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public JsxFragment(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_fragment");
@@ -1584,13 +1584,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxNamespaceName : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public JsxNamespaceName(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_namespace_name");
@@ -1598,20 +1598,20 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class JsxOpeningElement : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Attribute { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Attribute { get; set; }
         public TypescriptLanguageNode Name { get; set; }
         public TypeArguments? TypeArguments { get; set; }
         public JsxOpeningElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_opening_element");
             
-            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
             this.Name = (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(node.ChildByFieldName("name"))!;
             {
                 var tmp = node.ChildByFieldName("type_arguments");
@@ -1622,14 +1622,14 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class JsxSelfClosingElement : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Attribute { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Attribute { get; set; }
         public TypescriptLanguageNode Name { get; set; }
         public TypeArguments? TypeArguments { get; set; }
         public JsxSelfClosingElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_self_closing_element");
             
-            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
             this.Name = (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(node.ChildByFieldName("name"))!;
             {
                 var tmp = node.ChildByFieldName("type_arguments");
@@ -1654,7 +1654,7 @@ namespace TreeSitter.Typescript.Nodes {
     public class LexicalDeclaration : TypescriptLanguageNode, Declaration
     {
         public TypescriptLanguageNodeTerminalNode Kind { get; set; }
-        public System.Collections.Generic.List<VariableDeclarator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<VariableDeclarator> Children { get; set; }
         public LexicalDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "lexical_declaration");
@@ -1663,13 +1663,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new VariableDeclarator(x)).ToList();
+                .Select(x => new VariableDeclarator(x));
         }
     }
 
     public class LiteralType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public LiteralType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "literal_type");
@@ -1677,13 +1677,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class LookupType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public LookupType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "lookup_type");
@@ -1691,7 +1691,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1747,7 +1747,7 @@ namespace TreeSitter.Typescript.Nodes {
         public FormalParameters Parameters { get; set; }
         public TypescriptLanguageNode? ReturnType { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public MethodDefinition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "method_definition");
@@ -1766,7 +1766,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1776,7 +1776,7 @@ namespace TreeSitter.Typescript.Nodes {
         public FormalParameters Parameters { get; set; }
         public TypescriptLanguageNode? ReturnType { get; set; }
         public TypeParameters? TypeParameters { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public MethodSignature(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "method_signature");
@@ -1794,7 +1794,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1816,7 +1816,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class NamedImports : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<ImportSpecifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ImportSpecifier> Children { get; set; }
         public NamedImports(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "named_imports");
@@ -1824,13 +1824,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ImportSpecifier(x)).ToList();
+                .Select(x => new ImportSpecifier(x));
         }
     }
 
     public class NamespaceExport : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public NamespaceExport(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "namespace_export");
@@ -1838,13 +1838,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class NamespaceImport : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public NamespaceImport(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "namespace_import");
@@ -1852,13 +1852,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class NestedIdentifier : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public NestedIdentifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "nested_identifier");
@@ -1866,7 +1866,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1906,7 +1906,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class NonNullExpression : TypescriptLanguageNode, Pattern, PrimaryExpression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public NonNullExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "non_null_expression");
@@ -1914,13 +1914,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class Object : TypescriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Object(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "object");
@@ -1928,7 +1928,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1947,7 +1947,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ObjectPattern : TypescriptLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ObjectPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "object_pattern");
@@ -1955,13 +1955,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ObjectType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ObjectType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "object_type");
@@ -1969,13 +1969,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class OmittingTypeAnnotation : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public OmittingTypeAnnotation(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "omitting_type_annotation");
@@ -1983,13 +1983,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class OptingTypeAnnotation : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public OptingTypeAnnotation(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "opting_type_annotation");
@@ -1997,7 +1997,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2012,17 +2012,17 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class OptionalParameter : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public Identifier? Name { get; set; }
         public TypescriptLanguageNode? Pattern { get; set; }
         public TypeAnnotation? Type { get; set; }
         public Expression? Value { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public OptionalParameter(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "optional_parameter");
             
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             {
                 var tmp = node.ChildByFieldName("name");
                 this.Name = tmp is null ? null : new Identifier(tmp);
@@ -2042,13 +2042,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class OptionalType : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public OptionalType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "optional_type");
@@ -2056,7 +2056,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2098,7 +2098,7 @@ namespace TreeSitter.Typescript.Nodes {
     public class ParenthesizedExpression : TypescriptLanguageNode, PrimaryExpression
     {
         public TypeAnnotation? Type { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ParenthesizedExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_expression");
@@ -2110,13 +2110,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ParenthesizedType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ParenthesizedType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_type");
@@ -2124,7 +2124,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2139,7 +2139,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class Program : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public Program(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "program");
@@ -2147,7 +2147,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2155,7 +2155,7 @@ namespace TreeSitter.Typescript.Nodes {
     {
         public TypescriptLanguageNode Name { get; set; }
         public TypeAnnotation? Type { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public PropertySignature(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "property_signature");
@@ -2168,7 +2168,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2177,7 +2177,7 @@ namespace TreeSitter.Typescript.Nodes {
         public TypescriptLanguageNode Name { get; set; }
         public TypeAnnotation? Type { get; set; }
         public Expression? Value { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public PublicFieldDefinition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "public_field_definition");
@@ -2194,13 +2194,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ReadonlyType : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ReadonlyType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "readonly_type");
@@ -2208,7 +2208,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2230,17 +2230,17 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class RequiredParameter : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public TypescriptLanguageNode? Name { get; set; }
         public TypescriptLanguageNode? Pattern { get; set; }
         public TypeAnnotation? Type { get; set; }
         public Expression? Value { get; set; }
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public RequiredParameter(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "required_parameter");
             
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             {
                 var tmp = node.ChildByFieldName("name");
                 this.Name = tmp is null ? null : (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(tmp);
@@ -2260,13 +2260,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class RestPattern : TypescriptLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public RestPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "rest_pattern");
@@ -2274,13 +2274,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class RestType : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public RestType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "rest_type");
@@ -2288,13 +2288,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ReturnStatement : TypescriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ReturnStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "return_statement");
@@ -2302,13 +2302,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class SatisfiesExpression : TypescriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public SatisfiesExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "satisfies_expression");
@@ -2316,7 +2316,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2335,7 +2335,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class SpreadElement : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public SpreadElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "spread_element");
@@ -2343,13 +2343,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class StatementBlock : TypescriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<Statement> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Children { get; set; }
         public StatementBlock(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "statement_block");
@@ -2357,13 +2357,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class String : TypescriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public String(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "string");
@@ -2371,7 +2371,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2395,7 +2395,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class SwitchBody : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public SwitchBody(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "switch_body");
@@ -2403,31 +2403,31 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class SwitchCase : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Statement> Body { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Body { get; set; }
         public TypescriptLanguageNode Value { get; set; }
         public SwitchCase(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "switch_case");
             
-            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!);
             this.Value = (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(node.ChildByFieldName("value"))!;
         }
     }
 
     public class SwitchDefault : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<Statement> Body { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Body { get; set; }
         public SwitchDefault(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "switch_default");
             
-            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!).ToList();
+            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2446,7 +2446,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class TemplateLiteralType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TemplateType> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TemplateType> Children { get; set; }
         public TemplateLiteralType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "template_literal_type");
@@ -2454,13 +2454,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TemplateType(x)).ToList();
+                .Select(x => new TemplateType(x));
         }
     }
 
     public class TemplateString : TypescriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TemplateString(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "template_string");
@@ -2468,13 +2468,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class TemplateSubstitution : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TemplateSubstitution(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "template_substitution");
@@ -2482,13 +2482,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class TemplateType : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TemplateType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "template_type");
@@ -2496,7 +2496,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2517,7 +2517,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class ThrowStatement : TypescriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public ThrowStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "throw_statement");
@@ -2525,7 +2525,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2552,7 +2552,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class TupleType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TupleType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "tuple_type");
@@ -2560,7 +2560,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2584,7 +2584,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class TypeAnnotation : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TypeAnnotation(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_annotation");
@@ -2592,13 +2592,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class TypeArguments : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TypeArguments(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_arguments");
@@ -2606,13 +2606,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class TypeAssertion : TypescriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TypeAssertion(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_assertion");
@@ -2620,7 +2620,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2647,7 +2647,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class TypeParameters : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypeParameter> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypeParameter> Children { get; set; }
         public TypeParameters(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_parameters");
@@ -2655,7 +2655,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypeParameter(x)).ToList();
+                .Select(x => new TypeParameter(x));
         }
     }
 
@@ -2674,7 +2674,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class TypePredicateAnnotation : TypescriptLanguageNode
     {
-        public System.Collections.Generic.List<TypePredicate> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypePredicate> Children { get; set; }
         public TypePredicateAnnotation(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_predicate_annotation");
@@ -2682,13 +2682,13 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TypePredicate(x)).ToList();
+                .Select(x => new TypePredicate(x));
         }
     }
 
     public class TypeQuery : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public TypeQuery(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "type_query");
@@ -2696,7 +2696,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2715,7 +2715,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class UnionType : TypescriptLanguageNode, IPrimaryType
     {
-        public System.Collections.Generic.List<TypescriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TypescriptLanguageNode> Children { get; set; }
         public UnionType(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "union_type");
@@ -2723,7 +2723,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (TypescriptLanguageNode) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -2742,7 +2742,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class VariableDeclaration : TypescriptLanguageNode, Declaration
     {
-        public System.Collections.Generic.List<VariableDeclarator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<VariableDeclarator> Children { get; set; }
         public VariableDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "variable_declaration");
@@ -2750,7 +2750,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new VariableDeclarator(x)).ToList();
+                .Select(x => new VariableDeclarator(x));
         }
     }
 
@@ -2803,7 +2803,7 @@ namespace TreeSitter.Typescript.Nodes {
 
     public class YieldExpression : TypescriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public YieldExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "yield_expression");
@@ -2811,7 +2811,7 @@ namespace TreeSitter.Typescript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) TypescriptLanguageNode.FromNode(x)!);
         }
     }
 

@@ -18,23 +18,23 @@ namespace TreeSitter.HTML.Nodes {
             if (!node.IsNamed) return new HTMLLanguageNodeTerminalNode(node);
             switch (node.Kind) {
                 case "attribute_name": return new AttributeName(node);
-                case "quoted_attribute_value": return new QuotedAttributeValue(node);
+                case "end_tag": return new EndTag(node);
+                case "fragment": return new Fragment(node);
                 case "raw_text": return new RawText(node);
-                case "attribute_value": return new AttributeValue(node);
+                case "text": return new Text(node);
                 case "attribute": return new Attribute(node);
-                case "script_element": return new ScriptElement(node);
+                case "tag_name": return new TagName(node);
+                case "erroneous_end_tag": return new ErroneousEndTag(node);
+                case "start_tag": return new StartTag(node);
+                case "attribute_value": return new AttributeValue(node);
+                case "style_element": return new StyleElement(node);
+                case "comment": return new Comment(node);
+                case "erroneous_end_tag_name": return new ErroneousEndTagName(node);
+                case "self_closing_tag": return new SelfClosingTag(node);
                 case "doctype": return new Doctype(node);
                 case "element": return new Element(node);
-                case "fragment": return new Fragment(node);
-                case "self_closing_tag": return new SelfClosingTag(node);
-                case "tag_name": return new TagName(node);
-                case "text": return new Text(node);
-                case "comment": return new Comment(node);
-                case "start_tag": return new StartTag(node);
-                case "end_tag": return new EndTag(node);
-                case "erroneous_end_tag": return new ErroneousEndTag(node);
-                case "style_element": return new StyleElement(node);
-                case "erroneous_end_tag_name": return new ErroneousEndTagName(node);
+                case "script_element": return new ScriptElement(node);
+                case "quoted_attribute_value": return new QuotedAttributeValue(node);
                 case "ERROR": return new ErrorNode(node);
                 default: throw new System.ArgumentException("unknown node type: " + node.Kind, nameof(node));
             }
@@ -65,7 +65,7 @@ namespace TreeSitter.HTML.Nodes {
 
     public class Attribute : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public Attribute(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "attribute");
@@ -73,7 +73,7 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 
@@ -88,7 +88,7 @@ namespace TreeSitter.HTML.Nodes {
 
     public class Element : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public Element(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "element");
@@ -96,13 +96,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 
     public class EndTag : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<TagName> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<TagName> Children { get; set; }
         public EndTag(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "end_tag");
@@ -110,13 +110,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new TagName(x)).ToList();
+                .Select(x => new TagName(x));
         }
     }
 
     public class ErroneousEndTag : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<ErroneousEndTagName> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ErroneousEndTagName> Children { get; set; }
         public ErroneousEndTag(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "erroneous_end_tag");
@@ -124,13 +124,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ErroneousEndTagName(x)).ToList();
+                .Select(x => new ErroneousEndTagName(x));
         }
     }
 
     public class Fragment : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public Fragment(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "fragment");
@@ -138,13 +138,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 
     public class QuotedAttributeValue : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<AttributeValue> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<AttributeValue> Children { get; set; }
         public QuotedAttributeValue(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "quoted_attribute_value");
@@ -152,13 +152,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new AttributeValue(x)).ToList();
+                .Select(x => new AttributeValue(x));
         }
     }
 
     public class ScriptElement : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public ScriptElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "script_element");
@@ -166,13 +166,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 
     public class SelfClosingTag : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public SelfClosingTag(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "self_closing_tag");
@@ -180,13 +180,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 
     public class StartTag : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public StartTag(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "start_tag");
@@ -194,13 +194,13 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 
     public class StyleElement : HTMLLanguageNode
     {
-        public System.Collections.Generic.List<HTMLLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<HTMLLanguageNode> Children { get; set; }
         public StyleElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "style_element");
@@ -208,7 +208,7 @@ namespace TreeSitter.HTML.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (HTMLLanguageNode) HTMLLanguageNode.FromNode(x)!);
         }
     }
 

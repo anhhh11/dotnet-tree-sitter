@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Linq;
 using TreeSitter.Python;
 using TreeSitter.Python.Nodes;
 
@@ -79,7 +80,7 @@ namespace TreeSitter.Test
             Assert.IsInstanceOf<Module>(res);
 
             var module = (Module) res!;
-            Assert.IsInstanceOf<FunctionDefinition>(module.Children[0]);
+            Assert.IsInstanceOf<FunctionDefinition>(module.Children.ToList()[0]);
         }
     }
 }

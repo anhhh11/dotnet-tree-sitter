@@ -17,116 +17,116 @@ namespace TreeSitter.JavaScript.Nodes {
             if (node is null) throw new System.ArgumentNullException(nameof(node));
             if (!node.IsNamed) return new JavaScriptLanguageNodeTerminalNode(node);
             switch (node.Kind) {
-                case "class_body": return new ClassBody(node);
-                case "regex_pattern": return new RegexPattern(node);
-                case "jsx_self_closing_element": return new JsxSelfClosingElement(node);
-                case "expression_statement": return new ExpressionStatement(node);
-                case "for_in_statement": return new ForInStatement(node);
-                case "import_specifier": return new ImportSpecifier(node);
-                case "number": return new Number(node);
-                case "debugger_statement": return new DebuggerStatement(node);
-                case "decorator": return new Decorator(node);
-                case "hash_bang_line": return new HashBangLine(node);
-                case "program": return new Program(node);
-                case "import_clause": return new ImportClause(node);
-                case "function_declaration": return new FunctionDeclaration(node);
-                case "jsx_closing_element": return new JsxClosingElement(node);
-                case "try_statement": return new TryStatement(node);
-                case "pair_pattern": return new PairPattern(node);
-                case "new_expression": return new NewExpression(node);
-                case "jsx_attribute": return new JsxAttribute(node);
-                case "arrow_function": return new ArrowFunction(node);
-                case "statement_identifier": return new StatementIdentifier(node);
-                case "jsx_opening_element": return new JsxOpeningElement(node);
-                case "named_imports": return new NamedImports(node);
-                case "namespace_export": return new NamespaceExport(node);
-                case "switch_statement": return new SwitchStatement(node);
-                case "array_pattern": return new ArrayPattern(node);
-                case "unary_expression": return new UnaryExpression(node);
-                case "break_statement": return new BreakStatement(node);
-                case "generator_function_declaration": return new GeneratorFunctionDeclaration(node);
-                case "property_identifier": return new PropertyIdentifier(node);
-                case "while_statement": return new WhileStatement(node);
-                case "jsx_element": return new JsxElement(node);
-                case "this": return new This(node);
-                case "regex_flags": return new RegexFlags(node);
-                case "nested_identifier": return new NestedIdentifier(node);
-                case "binary_expression": return new BinaryExpression(node);
-                case "variable_declaration": return new VariableDeclaration(node);
-                case "template_string": return new TemplateString(node);
-                case "throw_statement": return new ThrowStatement(node);
-                case "else_clause": return new ElseClause(node);
-                case "object_assignment_pattern": return new ObjectAssignmentPattern(node);
-                case "assignment_pattern": return new AssignmentPattern(node);
-                case "assignment_expression": return new AssignmentExpression(node);
-                case "method_definition": return new MethodDefinition(node);
-                case "continue_statement": return new ContinueStatement(node);
-                case "if_statement": return new IfStatement(node);
-                case "import_statement": return new ImportStatement(node);
-                case "subscript_expression": return new SubscriptExpression(node);
-                case "super": return new Super(node);
-                case "member_expression": return new MemberExpression(node);
-                case "empty_statement": return new EmptyStatement(node);
-                case "catch_clause": return new CatchClause(node);
-                case "export_specifier": return new ExportSpecifier(node);
-                case "for_statement": return new ForStatement(node);
-                case "class_declaration": return new ClassDeclaration(node);
-                case "template_substitution": return new TemplateSubstitution(node);
-                case "meta_property": return new MetaProperty(node);
-                case "shorthand_property_identifier": return new ShorthandPropertyIdentifier(node);
-                case "labeled_statement": return new LabeledStatement(node);
-                case "switch_body": return new SwitchBody(node);
-                case "variable_declarator": return new VariableDeclarator(node);
-                case "jsx_text": return new JsxText(node);
-                case "null": return new Null(node);
-                case "jsx_fragment": return new JsxFragment(node);
-                case "switch_default": return new SwitchDefault(node);
-                case "return_statement": return new ReturnStatement(node);
-                case "true": return new True(node);
-                case "export_clause": return new ExportClause(node);
-                case "await_expression": return new AwaitExpression(node);
-                case "shorthand_property_identifier_pattern": return new ShorthandPropertyIdentifierPattern(node);
-                case "formal_parameters": return new FormalParameters(node);
-                case "sequence_expression": return new SequenceExpression(node);
-                case "augmented_assignment_expression": return new AugmentedAssignmentExpression(node);
-                case "statement_block": return new StatementBlock(node);
-                case "regex": return new Regex(node);
-                case "parenthesized_expression": return new ParenthesizedExpression(node);
-                case "class_heritage": return new ClassHeritage(node);
-                case "lexical_declaration": return new LexicalDeclaration(node);
-                case "generator_function": return new GeneratorFunction(node);
-                case "array": return new Array(node);
-                case "false": return new False(node);
                 case "string_fragment": return new StringFragment(node);
-                case "jsx_namespace_name": return new JsxNamespaceName(node);
-                case "function": return new Function(node);
-                case "update_expression": return new UpdateExpression(node);
-                case "export_statement": return new ExportStatement(node);
-                case "finally_clause": return new FinallyClause(node);
-                case "arguments": return new Arguments(node);
-                case "field_definition": return new FieldDefinition(node);
-                case "pair": return new Pair(node);
-                case "object": return new Object(node);
-                case "object_pattern": return new ObjectPattern(node);
-                case "string": return new String(node);
-                case "class": return new Class(node);
-                case "call_expression": return new CallExpression(node);
-                case "ternary_expression": return new TernaryExpression(node);
-                case "comment": return new Comment(node);
-                case "with_statement": return new WithStatement(node);
-                case "private_property_identifier": return new PrivatePropertyIdentifier(node);
+                case "throw_statement": return new ThrowStatement(node);
                 case "namespace_import": return new NamespaceImport(node);
-                case "computed_property_name": return new ComputedPropertyName(node);
+                case "field_definition": return new FieldDefinition(node);
+                case "variable_declaration": return new VariableDeclaration(node);
+                case "expression_statement": return new ExpressionStatement(node);
+                case "class_heritage": return new ClassHeritage(node);
+                case "generator_function": return new GeneratorFunction(node);
+                case "array_pattern": return new ArrayPattern(node);
                 case "do_statement": return new DoStatement(node);
+                case "break_statement": return new BreakStatement(node);
+                case "for_in_statement": return new ForInStatement(node);
+                case "arguments": return new Arguments(node);
+                case "nested_identifier": return new NestedIdentifier(node);
+                case "super": return new Super(node);
+                case "function_declaration": return new FunctionDeclaration(node);
+                case "regex": return new Regex(node);
+                case "jsx_attribute": return new JsxAttribute(node);
+                case "computed_property_name": return new ComputedPropertyName(node);
+                case "jsx_self_closing_element": return new JsxSelfClosingElement(node);
+                case "new_expression": return new NewExpression(node);
+                case "method_definition": return new MethodDefinition(node);
+                case "array": return new Array(node);
+                case "export_clause": return new ExportClause(node);
+                case "empty_statement": return new EmptyStatement(node);
+                case "await_expression": return new AwaitExpression(node);
+                case "unary_expression": return new UnaryExpression(node);
+                case "identifier": return new Identifier(node);
+                case "arrow_function": return new ArrowFunction(node);
+                case "jsx_opening_element": return new JsxOpeningElement(node);
+                case "else_clause": return new ElseClause(node);
+                case "if_statement": return new IfStatement(node);
+                case "import_specifier": return new ImportSpecifier(node);
+                case "export_specifier": return new ExportSpecifier(node);
+                case "object_assignment_pattern": return new ObjectAssignmentPattern(node);
+                case "pair": return new Pair(node);
+                case "null": return new Null(node);
+                case "shorthand_property_identifier_pattern": return new ShorthandPropertyIdentifierPattern(node);
+                case "subscript_expression": return new SubscriptExpression(node);
+                case "lexical_declaration": return new LexicalDeclaration(node);
+                case "export_statement": return new ExportStatement(node);
+                case "labeled_statement": return new LabeledStatement(node);
+                case "continue_statement": return new ContinueStatement(node);
+                case "function": return new Function(node);
+                case "import_statement": return new ImportStatement(node);
+                case "jsx_fragment": return new JsxFragment(node);
+                case "pair_pattern": return new PairPattern(node);
+                case "ternary_expression": return new TernaryExpression(node);
+                case "jsx_text": return new JsxText(node);
+                case "decorator": return new Decorator(node);
+                case "import_clause": return new ImportClause(node);
+                case "property_identifier": return new PropertyIdentifier(node);
+                case "named_imports": return new NamedImports(node);
+                case "number": return new Number(node);
+                case "statement_identifier": return new StatementIdentifier(node);
+                case "this": return new This(node);
+                case "finally_clause": return new FinallyClause(node);
+                case "try_statement": return new TryStatement(node);
+                case "private_property_identifier": return new PrivatePropertyIdentifier(node);
+                case "catch_clause": return new CatchClause(node);
+                case "jsx_closing_element": return new JsxClosingElement(node);
+                case "program": return new Program(node);
+                case "escape_sequence": return new EscapeSequence(node);
                 case "spread_element": return new SpreadElement(node);
                 case "yield_expression": return new YieldExpression(node);
-                case "escape_sequence": return new EscapeSequence(node);
-                case "undefined": return new Undefined(node);
-                case "rest_pattern": return new RestPattern(node);
-                case "identifier": return new Identifier(node);
-                case "switch_case": return new SwitchCase(node);
-                case "import": return new Import(node);
+                case "binary_expression": return new BinaryExpression(node);
+                case "formal_parameters": return new FormalParameters(node);
                 case "jsx_expression": return new JsxExpression(node);
+                case "sequence_expression": return new SequenceExpression(node);
+                case "shorthand_property_identifier": return new ShorthandPropertyIdentifier(node);
+                case "undefined": return new Undefined(node);
+                case "object": return new Object(node);
+                case "statement_block": return new StatementBlock(node);
+                case "true": return new True(node);
+                case "hash_bang_line": return new HashBangLine(node);
+                case "variable_declarator": return new VariableDeclarator(node);
+                case "namespace_export": return new NamespaceExport(node);
+                case "jsx_element": return new JsxElement(node);
+                case "call_expression": return new CallExpression(node);
+                case "class": return new Class(node);
+                case "member_expression": return new MemberExpression(node);
+                case "regex_pattern": return new RegexPattern(node);
+                case "rest_pattern": return new RestPattern(node);
+                case "string": return new String(node);
+                case "template_substitution": return new TemplateSubstitution(node);
+                case "class_body": return new ClassBody(node);
+                case "update_expression": return new UpdateExpression(node);
+                case "switch_statement": return new SwitchStatement(node);
+                case "augmented_assignment_expression": return new AugmentedAssignmentExpression(node);
+                case "object_pattern": return new ObjectPattern(node);
+                case "import": return new Import(node);
+                case "with_statement": return new WithStatement(node);
+                case "while_statement": return new WhileStatement(node);
+                case "false": return new False(node);
+                case "parenthesized_expression": return new ParenthesizedExpression(node);
+                case "switch_case": return new SwitchCase(node);
+                case "template_string": return new TemplateString(node);
+                case "for_statement": return new ForStatement(node);
+                case "meta_property": return new MetaProperty(node);
+                case "debugger_statement": return new DebuggerStatement(node);
+                case "switch_body": return new SwitchBody(node);
+                case "return_statement": return new ReturnStatement(node);
+                case "jsx_namespace_name": return new JsxNamespaceName(node);
+                case "class_declaration": return new ClassDeclaration(node);
+                case "switch_default": return new SwitchDefault(node);
+                case "assignment_expression": return new AssignmentExpression(node);
+                case "assignment_pattern": return new AssignmentPattern(node);
+                case "regex_flags": return new RegexFlags(node);
+                case "comment": return new Comment(node);
+                case "generator_function_declaration": return new GeneratorFunctionDeclaration(node);
                 case "ERROR": return new ErrorNode(node);
                 default: throw new System.ArgumentException("unknown node type: " + node.Kind, nameof(node));
             }
@@ -177,7 +177,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class Arguments : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public Arguments(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "arguments");
@@ -185,13 +185,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class Array : JavaScriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public Array(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "array");
@@ -199,13 +199,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ArrayPattern : JavaScriptLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ArrayPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "array_pattern");
@@ -213,7 +213,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -281,7 +281,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class AwaitExpression : JavaScriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public AwaitExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "await_expression");
@@ -289,7 +289,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -354,15 +354,15 @@ namespace TreeSitter.JavaScript.Nodes {
     public class Class : JavaScriptLanguageNode, PrimaryExpression
     {
         public ClassBody Body { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public Identifier? Name { get; set; }
-        public System.Collections.Generic.List<ClassHeritage> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ClassHeritage> Children { get; set; }
         public Class(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class");
             
             this.Body = new ClassBody(node.ChildByFieldName("body"));
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             {
                 var tmp = node.ChildByFieldName("name");
                 this.Name = tmp is null ? null : new Identifier(tmp);
@@ -370,44 +370,44 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ClassHeritage(x)).ToList();
+                .Select(x => new ClassHeritage(x));
         }
     }
 
     public class ClassBody : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Member { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Member { get; set; }
         public ClassBody(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_body");
             
-            this.Member = node.ChildrenByFieldName("member").Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+            this.Member = node.ChildrenByFieldName("member").Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ClassDeclaration : JavaScriptLanguageNode, Declaration
     {
         public ClassBody Body { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public Identifier Name { get; set; }
-        public System.Collections.Generic.List<ClassHeritage> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ClassHeritage> Children { get; set; }
         public ClassDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_declaration");
             
             this.Body = new ClassBody(node.ChildByFieldName("body"));
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             this.Name = new Identifier(node.ChildByFieldName("name"));
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ClassHeritage(x)).ToList();
+                .Select(x => new ClassHeritage(x));
         }
     }
 
     public class ClassHeritage : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ClassHeritage(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "class_heritage");
@@ -415,13 +415,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ComputedPropertyName : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public ComputedPropertyName(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "computed_property_name");
@@ -429,7 +429,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -458,7 +458,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class Decorator : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public Decorator(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "decorator");
@@ -466,7 +466,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -485,7 +485,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class ElseClause : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Statement> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Children { get; set; }
         public ElseClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "else_clause");
@@ -493,7 +493,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -508,7 +508,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class ExportClause : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<ExportSpecifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ExportSpecifier> Children { get; set; }
         public ExportClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "export_clause");
@@ -516,7 +516,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ExportSpecifier(x)).ToList();
+                .Select(x => new ExportSpecifier(x));
         }
     }
 
@@ -539,10 +539,10 @@ namespace TreeSitter.JavaScript.Nodes {
     public class ExportStatement : JavaScriptLanguageNode, Statement
     {
         public Declaration? Declaration { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public String? Source { get; set; }
         public Expression? Value { get; set; }
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ExportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "export_statement");
@@ -551,7 +551,7 @@ namespace TreeSitter.JavaScript.Nodes {
                 var tmp = node.ChildByFieldName("declaration");
                 this.Declaration = tmp is null ? null : (Declaration) JavaScriptLanguageNode.FromNode(tmp);
             }
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             {
                 var tmp = node.ChildByFieldName("source");
                 this.Source = tmp is null ? null : new String(tmp);
@@ -563,13 +563,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ExpressionStatement : JavaScriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ExpressionStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "expression_statement");
@@ -577,20 +577,20 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class FieldDefinition : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public JavaScriptLanguageNode Property { get; set; }
         public Expression? Value { get; set; }
         public FieldDefinition(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "field_definition");
             
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             this.Property = (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(node.ChildByFieldName("property"))!;
             {
                 var tmp = node.ChildByFieldName("value");
@@ -659,7 +659,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class FormalParameters : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public FormalParameters(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "formal_parameters");
@@ -667,7 +667,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -766,7 +766,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class ImportClause : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ImportClause(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_clause");
@@ -774,7 +774,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -797,7 +797,7 @@ namespace TreeSitter.JavaScript.Nodes {
     public class ImportStatement : JavaScriptLanguageNode, Statement
     {
         public String Source { get; set; }
-        public System.Collections.Generic.List<ImportClause> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ImportClause> Children { get; set; }
         public ImportStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "import_statement");
@@ -806,13 +806,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ImportClause(x)).ToList();
+                .Select(x => new ImportClause(x));
         }
     }
 
     public class JsxAttribute : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public JsxAttribute(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_attribute");
@@ -820,7 +820,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -839,7 +839,7 @@ namespace TreeSitter.JavaScript.Nodes {
     {
         public JsxClosingElement CloseTag { get; set; }
         public JsxOpeningElement OpenTag { get; set; }
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public JsxElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_element");
@@ -849,13 +849,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxExpression : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public JsxExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_expression");
@@ -863,13 +863,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxFragment : JavaScriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public JsxFragment(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_fragment");
@@ -877,13 +877,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class JsxNamespaceName : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public JsxNamespaceName(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_namespace_name");
@@ -891,32 +891,32 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class JsxOpeningElement : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Attribute { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Attribute { get; set; }
         public JavaScriptLanguageNode Name { get; set; }
         public JsxOpeningElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_opening_element");
             
-            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
             this.Name = (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(node.ChildByFieldName("name"))!;
         }
     }
 
     public class JsxSelfClosingElement : JavaScriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Attribute { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Attribute { get; set; }
         public JavaScriptLanguageNode Name { get; set; }
         public JsxSelfClosingElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "jsx_self_closing_element");
             
-            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+            this.Attribute = node.ChildrenByFieldName("attribute").Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
             this.Name = (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(node.ChildByFieldName("name"))!;
         }
     }
@@ -937,7 +937,7 @@ namespace TreeSitter.JavaScript.Nodes {
     public class LexicalDeclaration : JavaScriptLanguageNode, Declaration
     {
         public JavaScriptLanguageNodeTerminalNode Kind { get; set; }
-        public System.Collections.Generic.List<VariableDeclarator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<VariableDeclarator> Children { get; set; }
         public LexicalDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "lexical_declaration");
@@ -946,7 +946,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new VariableDeclarator(x)).ToList();
+                .Select(x => new VariableDeclarator(x));
         }
     }
 
@@ -975,7 +975,7 @@ namespace TreeSitter.JavaScript.Nodes {
     public class MethodDefinition : JavaScriptLanguageNode
     {
         public StatementBlock Body { get; set; }
-        public System.Collections.Generic.List<Decorator> Decorator { get; set; }
+        public System.Collections.Generic.IEnumerable<Decorator> Decorator { get; set; }
         public JavaScriptLanguageNode Name { get; set; }
         public FormalParameters Parameters { get; set; }
         public MethodDefinition(TreeSitter.Node node) : base(node)
@@ -983,7 +983,7 @@ namespace TreeSitter.JavaScript.Nodes {
             System.Diagnostics.Debug.Assert(node.Kind == "method_definition");
             
             this.Body = new StatementBlock(node.ChildByFieldName("body"));
-            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x)).ToList();
+            this.Decorator = node.ChildrenByFieldName("decorator").Select(x => new Decorator(x));
             this.Name = (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(node.ChildByFieldName("name"))!;
             this.Parameters = new FormalParameters(node.ChildByFieldName("parameters"));
         }
@@ -991,7 +991,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class NamedImports : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<ImportSpecifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<ImportSpecifier> Children { get; set; }
         public NamedImports(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "named_imports");
@@ -999,13 +999,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new ImportSpecifier(x)).ToList();
+                .Select(x => new ImportSpecifier(x));
         }
     }
 
     public class NamespaceExport : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public NamespaceExport(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "namespace_export");
@@ -1013,13 +1013,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class NamespaceImport : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Identifier> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Identifier> Children { get; set; }
         public NamespaceImport(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "namespace_import");
@@ -1027,13 +1027,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new Identifier(x)).ToList();
+                .Select(x => new Identifier(x));
         }
     }
 
     public class NestedIdentifier : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public NestedIdentifier(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "nested_identifier");
@@ -1041,7 +1041,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1063,7 +1063,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class Object : JavaScriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public Object(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "object");
@@ -1071,7 +1071,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1090,7 +1090,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class ObjectPattern : JavaScriptLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ObjectPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "object_pattern");
@@ -1098,7 +1098,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1130,7 +1130,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class ParenthesizedExpression : JavaScriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ParenthesizedExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "parenthesized_expression");
@@ -1138,13 +1138,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class Program : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public Program(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "program");
@@ -1152,7 +1152,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1174,7 +1174,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class RestPattern : JavaScriptLanguageNode, Pattern
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public RestPattern(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "rest_pattern");
@@ -1182,13 +1182,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class ReturnStatement : JavaScriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ReturnStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "return_statement");
@@ -1196,7 +1196,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1215,7 +1215,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class SpreadElement : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public SpreadElement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "spread_element");
@@ -1223,13 +1223,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class StatementBlock : JavaScriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<Statement> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Children { get; set; }
         public StatementBlock(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "statement_block");
@@ -1237,13 +1237,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class String : JavaScriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public String(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "string");
@@ -1251,7 +1251,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1270,7 +1270,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class SwitchBody : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public SwitchBody(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "switch_body");
@@ -1278,31 +1278,31 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class SwitchCase : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Statement> Body { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Body { get; set; }
         public JavaScriptLanguageNode Value { get; set; }
         public SwitchCase(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "switch_case");
             
-            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!).ToList();
+            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!);
             this.Value = (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(node.ChildByFieldName("value"))!;
         }
     }
 
     public class SwitchDefault : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<Statement> Body { get; set; }
+        public System.Collections.Generic.IEnumerable<Statement> Body { get; set; }
         public SwitchDefault(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "switch_default");
             
-            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!).ToList();
+            this.Body = node.ChildrenByFieldName("body").Select(x => (Statement) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1321,7 +1321,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class TemplateString : JavaScriptLanguageNode, PrimaryExpression
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public TemplateString(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "template_string");
@@ -1329,13 +1329,13 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
     public class TemplateSubstitution : JavaScriptLanguageNode
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public TemplateSubstitution(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "template_substitution");
@@ -1343,7 +1343,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1364,7 +1364,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class ThrowStatement : JavaScriptLanguageNode, Statement
     {
-        public System.Collections.Generic.List<JavaScriptLanguageNode> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<JavaScriptLanguageNode> Children { get; set; }
         public ThrowStatement(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "throw_statement");
@@ -1372,7 +1372,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (JavaScriptLanguageNode) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
@@ -1425,7 +1425,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class VariableDeclaration : JavaScriptLanguageNode, Declaration
     {
-        public System.Collections.Generic.List<VariableDeclarator> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<VariableDeclarator> Children { get; set; }
         public VariableDeclaration(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "variable_declaration");
@@ -1433,7 +1433,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => new VariableDeclarator(x)).ToList();
+                .Select(x => new VariableDeclarator(x));
         }
     }
 
@@ -1481,7 +1481,7 @@ namespace TreeSitter.JavaScript.Nodes {
 
     public class YieldExpression : JavaScriptLanguageNode, Expression
     {
-        public System.Collections.Generic.List<Expression> Children { get; set; }
+        public System.Collections.Generic.IEnumerable<Expression> Children { get; set; }
         public YieldExpression(TreeSitter.Node node) : base(node)
         {
             System.Diagnostics.Debug.Assert(node.Kind == "yield_expression");
@@ -1489,7 +1489,7 @@ namespace TreeSitter.JavaScript.Nodes {
             this.Children = node.NamedChildrenWithFields
                 .Where(x => x.Key == null && !x.Value.IsExtra)
                 .Select(x => x.Value)
-                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!).ToList();
+                .Select(x => (Expression) JavaScriptLanguageNode.FromNode(x)!);
         }
     }
 
