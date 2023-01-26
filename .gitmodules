@@ -10,3 +10,12 @@
 [submodule "langs-native/tree-sitter-python"]
 	path = langs-native/tree-sitter-python
 	url = https://github.com/tree-sitter/tree-sitter-python
+[submodule "langs-native/tree-sitter-typescript"]
+	path = langs-native/tree-sitter-typescript
+	url = https://github.com/tree-sitter/tree-sitter-typescript
+[submodule "langs-native/tree-sitter-html"]
+	path = langs-native/tree-sitter-html
+	url = https://github.com/tree-sitter/tree-sitter-html
+[submodule "langs-native/tree-sitter-scss"]
+	path = langs-native/tree-sitter-scss
+	url = https://github.com/serenadeai/tree-sitter-scss

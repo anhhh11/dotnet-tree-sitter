@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Xml;
+using System.Xml.Linq;
 using TreeSitter.Native;
 using static TreeSitter.Native.Native;
 
@@ -241,23 +242,23 @@ namespace TreeSitter
 
         public IEnumerable<Node> ChildrenByFieldId(ushort fieldId)
         {
+            var count = this.ChildCount;
             using (var cursor = new TreeCursor(this))
             {
                 cursor.GotoFirstChild();
-
-                var done = false;
-                while (!done)
+                // Ref: https://github.com/tree-sitter/tree-sitter/blob/82f3d3232b9959cc04fe3f9bd4104c993b781b01/lib/binding_web/binding.c#L456
+                for (var i = 1; i < count; i++)
                 {
-                    while (cursor.FieldId != fieldId)
-                        if (!cursor.GotoNextSibling())
-                            yield break;
-
+                    var nextSibling = !cursor.GotoNextSibling();
                     var result = cursor.Current;
-
-                    if (!cursor.GotoNextSibling())
-                        done = true;
-
-                    yield return result;
+                    if (cursor.FieldId == fieldId)
+                    {
+                        yield return result;
+                    }
+                    if (!nextSibling)
+                    {
+                        yield break;
+                    }
                 }
             }
         }

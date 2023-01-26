@@ -20,7 +20,7 @@ To build everything, run the `build.py` script:
 python build.py
 ```
 
-This will use `gcc` for building native libraries, which are distributed as submodules.
+This will use cmake (`visual studio 2022` (tested), `gcc` not tested) for building native libraries, which are distributed as submodules.
 
 ## Usage
 
@@ -63,9 +63,23 @@ Debug.Assert(tree.Root.ToString() == Trim(
 
 (`Trim` is a utility function that replaces multiple whicespace characters with a single space).
 
-## Integrating with a new language
+## Integrating with a new language (clone)
+1. Add module to git .i.e Ruby
+git submodule add https://github.com/tree-sitter/tree-sitter-ruby
+2. Clone TreeSitter.C and change name .i.e TreeSitter.Ruby
+3. Modify CMakeLists.txt clone new project from .i.e TreeSitter.C (CLanguage.cs -> RubyLanguage.cs, TreeSitter.C.csproj -> TreeSitter.Ruby.csproj; change content of TreeSitter.C.csproj from .C -> .Ruby)
+4. Add TreeSitter.Ruby to content of tree-sitter.sln (clone TreeSitter.C and edit UUID - .i.e increase by 1)
+5. Add to build.py#langs list
+6. Run
+```shell
+python build.py
+```
+To compile the language native modules, as a platform-dependant (`.so`/`.dylib`/`.dll`) shared library.
+7. Add test by using reference from https://tree-sitter.github.io/tree-sitter/playground
 
-1. Compile the language native modules, as a platform-dependant (`.so`/`.dylib`/`.dll`) shared library.
-2. Declare the `[DllImport("...")] extern IntPtr tree_sitter_LANG();` function. 
-3. The `Language` constructor must be passed the `IntPtr` result of calling that function.
-4. Take a look at [CLanguage](TreeSitter.C/CLanguage.cs) class to see how it is done for the C language, including the helper `Create` function.
+
+## Integrating with a new language (details)
+1. Compile the language native modules, as a platform-dependant (.so/.dylib/.dll) shared library.
+2. Declare the [DllImport("...")] extern IntPtr tree_sitter_LANG(); function.
+3. The Language constructor must be passed the IntPtr result of calling that function.
+4. Take a look at CLanguage class to see how it is done for the C language, including the helper Create function.

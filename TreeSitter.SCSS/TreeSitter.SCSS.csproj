@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>TreeSitter.JavaScript</PackageId>
+        <PackageId>TreeSitter.SCSS</PackageId>
         <Version>1.0.0</Version>
         <Authors>Nikola Bebić</Authors>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -18,11 +18,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="tree-sitter-javascript.so">
+      <None Update="tree-sitter-scss.so">
           <Pack>True</Pack>
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-	  <None Update="tree-sitter-javascript.dll">
+	  <None Update="tree-sitter-scss.dll">
           <Pack>True</Pack>
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>

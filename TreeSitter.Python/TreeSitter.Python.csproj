@@ -22,6 +22,10 @@
           <Pack>True</Pack>
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+	  <None Update="tree-sitter-python.dll">
+          <Pack>True</Pack>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
         <None Include="..\LICENSE.txt">
             <Pack>True</Pack>
             <PackagePath>LICENSE.txt</PackagePath>

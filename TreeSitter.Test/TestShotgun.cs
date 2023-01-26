@@ -8,6 +8,15 @@ using TreeSitter.JavaScript.Nodes;
 using TreeSitter.Python;
 using TreeSitter.Python.Nodes;
 
+using TreeSitter.HTML;
+using TreeSitter.HTML.Nodes;
+
+using TreeSitter.SCSS;
+using TreeSitter.SCSS.Nodes;
+
+using TreeSitter.Typescript;
+using TreeSitter.Typescript.Nodes;
+
 namespace TreeSitter.Test;
 
 public class TestShotgun
@@ -51,6 +60,36 @@ public class TestShotgun
             "../../../../langs-native/tree-sitter-c/examples",
             CLanguage.Create(),
             CLanguageNode.FromNode
+        );
+    }
+
+    [Test]
+    public void TestHtml()
+    {
+        PerformTest(
+            "../../../../langs-native/tree-sitter-html/examples",
+            HtmlLanguage.Create(),
+            HTMLLanguageNode.FromNode
+        );
+    }
+
+    [Test]
+    public void TestTypescript()
+    {
+        PerformTest(
+            "../../../../langs-native/tree-sitter-typescript/examples",
+            TypescriptLanguage.Create(),
+            TypescriptLanguageNode.FromNode
+        );
+    }
+
+    [Test]
+    public void TestSCSS()
+    {
+        PerformTest(
+            "../../../../langs-native/tree-sitter-scss/examples",
+            ScssLanguage.Create(),
+            SCSSLanguageNode.FromNode
         );
     }
 }

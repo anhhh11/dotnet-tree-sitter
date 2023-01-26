@@ -1,1 +1,10 @@
 .idea
+.vs
+__pycache__
+build
+*.dll
+*.so
+*.exp
+*.lib
+bin
+obj
